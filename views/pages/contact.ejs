@@ -1,0 +1,104 @@
+<html>
+<head>
+  <title>Contact | Pawan Industries</title>
+  <% include ../partials/meta %>
+  <% include ../partials/header %>
+</head>
+
+<body>
+
+  <header>
+    <div class="row no-gutters">
+      <div class="col-md-12">
+        <% include ../partials/nav %>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Section -->
+  <div class="row no-gutters">
+    <div class="col-md-12 mx-auto">
+      <div class="text-center" id="head">Contact Us</div>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="row no-gutters">
+    <div class="col-md-6">  
+      <div class="row no-gutters">
+        <table class="table" cellpadding="0" cellspacing="0">
+          <tbody>
+            <tr>
+              <td id="identity">Sudhir Aggarwal</td>
+              <td id="role">(Managing Director)</td>
+              <td>(India +91) <a href="tel:+919416026344">9416026344</a></td>
+              <td><a href="tel:+919416026344" title="Call Sudhir Kumar"><button class="btn btn-outline-success" id="call-btn">Call Now</button></a></td>
+            </tr>
+            <tr>
+              <td id="identity">Er. Akshit Aggarwal</td>
+              <td></td>
+              <td>(India +91) <a href="tel:+919992079494">9992079494</td>
+              <td><a href="tel:+919992079494" title="Call Er. Akshit Aggarwal"><button class="btn btn-outline-success" id="call-btn">Call Now</button></a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <br>
+      <address>
+        <div class="row no-gutters">
+          <table class="table">
+            <tbody>
+              <tr>
+                <td scope="col" id="name"><b>Address:</b></td>
+                <td id="addr"><b>PAWAN INDUSTRIES</b><br>
+                  Opp. Housing Board Colony,<br>
+                  Naraingarh Road,<br>
+                  Ambala City - 134007<br>
+                  Haryana, India<br>
+                  Ph: 171 - 2540344
+                </td>
+              </tr>
+              <tr>
+                <td scope="col" id="name"><b>Email:</b></td>
+                <td id="mailId"><a href="mailto:sales@pawanindustries.tech?subject=Regarding Query&body=Hi, I found you via your website..." title="Email us">sales@pawanindustries.tech</a></td>
+                <td id="mail-btn"><a href="mailto:sales@pawanindustries.tech?subject=Regarding Query&body=Hi, I found you via your website..." title="contact via email"><button class="btn btn-outline-primary" id="call-btn">Mail Us</button></a></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td id="mailId"><a href="mailto:pawan.industries@hotmail.com?subject=Regarding Query&body=Hi, I found you via your website..." title="Email us">pawan.industries@hotmail.com</a></td>
+                <td id="mail-btn"><a href="mailto:pawan.industries@hotmail.com?subject=Regarding Query&body=Hi, I found you via your website..." title="contact via email"><button class="btn btn-outline-primary" id="call-btn">Mail Us</button></a></td>
+              </tr>
+            </tbody>
+        </table>
+      </div>
+    </address>
+    </div>
+
+    <!-- Map -->
+    <div class="col-md-6" >
+      <div id="map"></div>
+        <script>
+          function myMap() {
+            var myCenter = new google.maps.LatLng(30.3915122,76.7936995);
+            var mapCanvas = document.getElementById("map");
+            var mapOptions = {center: myCenter, zoom: 9, gestureHandling: 'greedy'};
+            var map = new google.maps.Map(mapCanvas, mapOptions);
+            var marker = new google.maps.Marker({position:myCenter});
+            marker.setMap(map);
+            // infowindow.open(map,marker);
+          }
+        </script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCNruZm31QvHbhVQfw1yBvGFUoFMJO_6k&callback=myMap"></script>
+    </div>
+    <!-- Map Ends -->
+  </div>
+
+  <footer>
+    <% include ../partials/footer %>
+    <% include ../partials/modals %>
+  </footer>
+
+</body>
+</html>

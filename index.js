@@ -11,19 +11,19 @@ app.use(express.static(__dirname + '/static'));
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(req, res){
-	res.render('home');
+	res.render('pages/home');
 });
 
 app.get('/about', function(req, res){
-	res.render('about');
+	res.render('pages/about');
 });
 
 app.get('/contact', function(req, res){
-	res.render('contact');
+	res.render('pages/contact');
 });
 
 app.get('/*', function(req, res){
-	res.render('error');
+	res.render('pages/error');
 });
 
 app.listen(process.env.PORT || 3000, function(){

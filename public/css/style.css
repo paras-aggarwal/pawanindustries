@@ -6,11 +6,11 @@ nav{
   background-color: #323754;
 }
 
-/* Company */
+/* Logo */
 #brand{
-	font-size: 20px;
+	font-size: 30px;
 	margin-left: 5px;
-	font-family: 'Slabo 13px', serif;
+	font-family: 'Kalam', cursive;
 	text-transform: uppercase;
 }
 
@@ -45,11 +45,14 @@ nav{
     border: 1px solid rgba(0,0,0,.15);
     background-color: #fff;
   }
+  .carousel #adj-height{
+    height: 450px;
+  }
 }
 
 @media screen and (max-width: 500px) {
-  #adj-img{
-    background: url(assets/corouselm1.jpg);
+  #brand{
+    font-size: 22px;
   }
   .carousel #adj-height{
     height: 180px;
@@ -72,6 +75,21 @@ nav{
   }
   #call-btn{
     display: none;
+  }
+  #addr{
+    font-size: 16px;
+  }
+  #role{
+    font-size: 16px;
+  }
+  #identity{
+    font-size: 18px;
+  }
+  #mailId{
+    font-size: 16px;
+  }
+  #name{
+    font-size: 16px;
   }
 }
 
@@ -101,6 +119,11 @@ nav{
   text-transform: uppercase;
   font-weight: bold;
   color: #00B2FF;
+}
+#map{
+  width:100%;
+  height:80%;
+  background-color: #ccc;
 }
 .borderless td, .borderless th {
     border: none;
@@ -157,7 +180,7 @@ table{
   border-radius: 3px;
   color: white;
   font-size: 16px;
-  padding: 16px 32px;
+  padding: 10px 32px;
 }
 #footer{
   background-color: #191919;
@@ -184,13 +207,13 @@ th{
 #hr{
   width: 100%;
   height: 0.5;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 20px;
+  margin-bottom: 10px;
   background-color: #fff;
   color: #fff;
 }
 #t-and-c{
-  padding-left: 20px;
+  padding-left: 18px;
   color: #7a7a7a;
 }
 #seo-about{
@@ -203,4 +226,28 @@ a.deco-none {
 }
 a.deco-none:hover {
     text-decoration:none;
+}
+.modal-body{
+  text-align: justify;
+}
+.multiModal{
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.multiModal:hover{
+  background-color: #efefef;
+}
+a.modalLink{
+  color: #000 !important;
+  text-decoration:none;
+}
+a.modalLink:hover{
+  text-decoration: none;
+}
+@media screen and (max-width: 992px) {
+  #footer{
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+  }
 }
