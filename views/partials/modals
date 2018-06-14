@@ -1,0 +1,703 @@
+<html>
+<body>
+<!-- Products Industrial-->
+
+  <!-- Tank/Hopper weighing scale -->
+  <div class="modal fade tank-modal" tabindex="-1" role="dialog" aria-labelledby="tankWeighingLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="tankWeighingLabel">Tank/Hopper weighing scale</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <center><img src="assets/Industrial/tank/Silo_bank.jpg" class="img-fluid" width="765"></center>
+          <p><strong>For communication with external systems, several different protocols are available.</strong></p>
+          <p>By installing a silo, tank, hopper, bin or bunker on top of load cells, the weight of the contents can be determined (in kilograms or tonnes) with a <strong>very high accuracy</strong> (from approximately 0.1%) and easily passed to external data systems.</p>
+          <p>Silo, tank, hopper, bin or bunker weighing systems are generally used to determine the amount of material emptied into a truck and/or for inventory management. It is often very important to know the amount of material stored in a silo at any time.</p>
+          <p><strong>Typical materials that are stored in silos/tanks/hoppers:</strong></p>
+          <ul>
+            <li>Food and drink ingredients, e.g. wheat, flour, glucose syrup, grain, ethanol, fruit juices, edible oils such as olive oils</li>
+            <li>Plastic pellets</li>
+            <li>Biomass pellets</li>
+            <li>Fertilizers</li>
+            <li>Minerals and mined products, e.g. charcoal, sulphur, nickel, copper, iron ore</li>
+            <li>Paint</li>
+            <li>Concrete and cement</li>
+          </ul>
+          <p>A tank weighing system normally consists of <strong>three or four load cells,</strong> each with a <strong>weighing module</strong>, a <strong>junction box</strong> and a weight <strong>indicator or transmitter</strong>. The weighing module ensures that the correct amount of vertical force is applied to each load cell, preventing it from being affected by non-vertical forces and <strong>ensuring repeatability of its signal output.</strong> The junction box joins the wires from the individual load cells in a <strong>watertight</strong> manner and averages the millivolt (mV) signals from the load cells to create a combined mV value that is sent to the input terminals of the weight indicator or transmitter with the <strong>minimum possible level of electrical noise.</strong> This, in turn, will have several communication options to send the weight to a PLC or PC.</p>
+          <p>The weighing system can be <strong>calibrated</strong> by filling the silo with a <strong>known weight</strong> of the stored material, placing or hanging certified test weights on the silo, or making use of the <strong>“theoretical calibration”</strong> function of the weight indicator or transmitter (where available).  The “theoretical calibration” method uses the <strong>average (mean) sensitivity</strong> of the load cells (in millivolts per volt, or mV/V) to determine the mV signal that is sent to the weight indicator at specific values of applied weight</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Check Weigher -->
+  <div class="modal fade checkWeigher-modal" tabindex="-1" role="dialog" aria-labelledby="checkWeigherLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="checkWeigherLabel">Check-Weigher</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <center><img src="assets/Industrial/Checkweigher/CW.png" class="img-fluid"></center>
+          <p>A check weigher is an <strong>automated system</strong> designed to <strong>check the weight of packaged commodities</strong>, to satisfy internal controls and external trade applications.  They are usually found at the <strong>end of a production line</strong> in many industries, or in the despatch area of <strong>eCommerce warehouses.</strong></p>
+          <p>Check weighers used in <strong>legal-for-trade</strong> applications require the use of <strong>approved components</strong> such as load cells and measuring electronics.</p>
+          <p>There are 2 main types of check weigher:</p>
+          <ul>
+            <li><strong>Only</strong> the package content is <strong>checked</strong>; this is needed to calculate a price based on the content</li>
+            <li>The package content is <strong>checked and compared</strong> with defined upper and lower tolerances in order to accept or discard the package.  These <strong>tolerances are mandated</strong>, often in accordance with the <strong>e-mark legislation</strong>.  If a package has a weight outside the tolerance, it is removed from the production line.</li>
+          </ul>
+          <p>For both of these types, the check weighing process can be <strong>static (manual) or dynamic</strong>.  In dynamic check weighing, the package will be moving along a conveyor belt or roller system.  Therefore, the package’s <strong>static weight will be affected by the accelerations and vibrations</strong> occurring in the mechanical components of the conveyor.</p>
+          <p><strong>Typical items that are check weighed for trade purposes:</strong></p>
+          <ul>
+            <li>Bottles</li>
+            <li>Cans</li>
+            <li>Pots</li>
+            <li>Bags</li>
+            <li>Big-bags (FIBC)</li>
+            <li>Boxes</li>
+            <li>Packaged meat and fish products</li>
+          </ul>
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" width="765" height="315" src="https://www.youtube.com/embed/IvEmYHKWfbc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Waterproof -->
+  <div class="modal fade water-modal" tabindex="-1" role="dialog" aria-labelledby="waterproofScaleLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="waterproofScaleLabel">Waterproof Scales</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <center><a href="#" data-toggle="modal" data-target=".basicWater-modal" class="modalLink"><div class="multiModal"><h6>Waterproof (Basic) Scale</h6></div></a>
+          <hr>
+          <a href="#" data-toggle="modal" data-target=".proWater-modal" class="modalLink"><div class="multiModal"><h6>Waterproof Scale</h6></div></a></center>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade basicWater-modal" tabindex="-1" role="dialog" aria-labelledby="waterproofBasicLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="waterproofBasicLabel">Waterproof (Basic) Scales</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img src="http://eng.cas.co.kr/admincenter/files/upload/SW-1W(R)-2%20en[1].jpg" class="img-fluid" width="765">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade proWater-modal" tabindex="-1" role="dialog" aria-labelledby="waterproofLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="waterproofLabel">Waterproof Scales</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" width="765" height="315" src="https://www.youtube.com/embed/cR4Hw1XCZKA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+          <img src="http://eng.cas.co.kr/admincenter/files/upload/FW500-2[1].jpg" class="img-fluid" width="765">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Weigh Bridge -->
+  <div class="modal fade weighBridge-modal" tabindex="-1" role="dialog" aria-labelledby="weighBridgeLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="weighBridgeLabel">WeighBridge</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img src="http://eng.cas.co.kr/admincenter/files/upload/Ez%20Lodec%20en[1].jpg" width="765" class="img-fluid">
+          <img src="http://eng.cas.co.kr/admincenter/files/upload/RW-P%20en.jpg" width="765" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Piece Counting Scale -->
+  <div class="modal fade pieceCount-modal" tabindex="-1" role="dialog" aria-labelledby="pieceCountingLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="pieceCountingLabel">Piece Counting Scales</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img src="http://eng.cas.co.kr/admincenter/files/upload/EC-II%20en[1].jpg" class="img-fluid" width="765">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Drum filling Scale -->
+  <div class="modal fade drum-modal" tabindex="-1" role="dialog" aria-labelledby="drumFillingLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="drumFillingLabel">Drum Filling Scales</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img src="assets/Industrial/drum_filling/CFM-0300K_en.jpg" class="img-fluid" width="765">
+          <img src="assets/Industrial/drum_filling/CFM-Four-Drum_en.jpg" class="img-fluid" width="765">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Explosion Proof Scale -->
+  <div class="modal fade explosion-modal" tabindex="-1" role="dialog" aria-labelledby="explosionProofLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="explosionProofLabel">Explosion Proof Scales</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img src="http://eng.cas.co.kr/admincenter/files/upload/3_Detail[1].jpg" class="img-fluid" width="765">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Weights -->
+  <div class="modal fade weight-modal" tabindex="-1" role="dialog" aria-labelledby="weightsLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="weightsLabel">Weights</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <center><a href="#" data-toggle="modal" data-target=".ci-modal" class="modalLink"><div class="multiModal"><h6>C.I. Weights</h6></div></a>
+          <hr>
+          <a href="#" data-toggle="modal" data-target=".ss-modal" class="modalLink"><div class="multiModal"><h6>S.S. Weights</h6></div></a></center>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade ci-modal" tabindex="-1" role="dialog" aria-labelledby="ciWeightLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="ciWeightLabel">C.I. Weights</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <center><img src="assets/Industrial/weights/ci_weight_500.jpg" class="img-fluid"></center>
+          <div id="head">Specifications</div>
+          <div class="table-responsive">
+            <table class="table mx-auto">
+              <tr>
+                <td><b>Nominal Value</b></td>
+                <td><b>Order Number</b></td>
+              </tr>
+              <tr class="table-info">
+                <td>20g</td>
+                <td>CI1111</td>
+              </tr>
+              <tr>
+                <td>50g</td>
+                <td>CI1112</td>
+              </tr>
+              <tr class="table-info">
+                <td>100g</td>
+                <td>CI1113</td>
+              </tr>
+              <tr>
+                <td>200g</td>
+                <td>CI1114</td>
+              </tr>
+              <tr class="table-info">
+                <td>500g</td>
+                <td>CI1115</td>
+              </tr>
+              <tr>
+                <td>1Kg</td>
+                <td>CI1115</td>
+              </tr>
+              <tr class="table-info">
+                <td>2Kg</td>
+                <td>CI1116</td>
+              </tr>
+              <tr>
+                <td>5Kg</td>
+                <td>CI1117</td>
+              </tr>
+              <tr class="table-info">
+                <td>10Kg</td>
+                <td>CI1118</td>
+              </tr>
+              <tr>
+                <td>20Kg</td>
+                <td>CI1119</td>
+              </tr>
+              <tr class="table-info">
+                <td>50Kg</td>
+                <td>CI1120</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade ss-modal" tabindex="-1" role="dialog" aria-labelledby="ssWeightLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="ssWeightLabel">S.S. Weights</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img src="http://eng.cas.co.kr/admincenter/files/upload/Weight%20en.jpg" width="765" class="img-fluid">
+          <div id="head">Specifications</div>
+          <div class="table-responsive">
+            <table class="table mx-auto">
+              <tr>
+                <td></td>
+                <td><b>E1</b></td>
+                <td><b>E2</b></td>
+                <td><b>F1</b></td>
+                <td><b>F2</b></td>
+              </tr>
+              <tr>
+                <td><b>Value</b></td>
+                <td colspan="4"><b>Order Number</b></td>
+              </tr>
+              <tr class="table-info">
+                <td>1mg</td>
+                <td>CE1111</td>
+                <td>CE2111</td>
+                <td>CF1111</td>
+                <td>CF2111</td>
+              </tr>
+              <tr>
+                <td>2mg</td>
+                <td>CE1112</td>
+                <td>CE2112</td>
+                <td>CF1112</td>
+                <td>CF2112</td>
+              </tr>
+              <tr class="table-info">
+              <td>5mg</td>
+                <td>CE1113</td>
+                <td>CE2113</td>
+                <td>CF1113</td>
+                <td>CF2113</td>
+              </tr>
+              <tr>
+                <td>10mg</td>
+                <td>CE1114</td>
+                <td>CE2114</td>
+                <td>CF1114</td>
+                <td>CF2114</td>
+              </tr>
+              <tr class="table-info">
+                <td>20mg</td>
+                <td>CE1115</td>
+                <td>CE2115</td>
+                <td>CF1115</td>
+                <td>CF2115</td>
+              </tr>
+              <tr>
+                <td>50mg</td>
+                <td>CE1116</td>
+                <td>CE2116</td>
+                <td>CF1116</td>
+                <td>CF2116</td>
+              </tr>
+              <tr class="table-info">
+                <td>100mg</td>
+                <td>CE1117</td>
+                <td>CE2117</td>
+                <td>CF1117</td>
+                <td>CF2117</td>
+              </tr>
+              <tr>
+                <td>200mg</td>
+                <td>CE1118</td>
+                <td>CE2118</td>
+                <td>CF1118</td>
+                <td>CF2118</td>
+              </tr>
+              <tr class="table-info">
+                <td>500mg</td>
+                <td>CE1119</td>
+                <td>CE2119</td>
+                <td>CF1119</td>
+                <td>CF2119</td>
+              </tr>
+              <tr>
+                <td>1g</td>
+                <td>CE1120</td>
+                <td>CE2120</td>
+                <td>CF1120</td>
+                <td>CF2120</td>
+              </tr>
+              <tr class="table-info">
+                <td>2g</td>
+                <td>CE1121</td>
+                <td>CE2121</td>
+                <td>CF1121</td>
+                <td>CF2121</td>
+              </tr>
+              <tr>
+                <td>5g</td>
+                <td>CE1122</td>
+                <td>CE2122</td>
+                <td>CF1122</td>
+                <td>CF2122</td>
+              </tr>
+              <tr class="table-info">
+                <td>10g</td>
+                <td>CE1123</td>
+                <td>CE2123</td>
+                <td>CF1123</td>
+                <td>CF2123</td>
+              </tr>
+              <tr>
+                <td>20g</td>
+                <td>CE1124</td>
+                <td>CE2124</td>
+                <td>CF1124</td>
+                <td>CF2124</td>
+              </tr>
+              <tr class="table-info">
+                <td>50g</td>
+                <td>CE1125</td>
+                <td>CE2125</td>
+                <td>CF1125</td>
+                <td>CF2125</td>
+              </tr>
+              <tr>
+                <td>100g</td>
+                <td>CE1126</td>
+                <td>CE2126</td>
+                <td>CF1126</td>
+                <td>CF2126</td>
+              </tr>
+              <tr class="table-info">
+                <td>200g</td>
+                <td>CE1127</td>
+                <td>CE2127</td>
+                <td>CF1127</td>
+                <td>CF2127</td>
+              </tr>
+              <tr>
+                <td>500g</td>
+                <td>CE1128</td>
+                <td>CE2128</td>
+                <td>CF1128</td>
+                <td>CF2128</td>
+              </tr>
+              <tr class="table-info">
+                <td>1Kg</td>
+                <td>CE1129</td>
+                <td>CE2129</td>
+                <td>CF1129</td>
+                <td>CF2129</td>
+              </tr>
+              <tr>
+                <td>2Kg</td>
+                <td>CE1130</td>
+                <td>CE2130</td>
+                <td>CF1130</td>
+                <td>CF2130</td>
+              </tr>
+              <tr class="table-info">
+                <td>5Kg</td>
+                <td>CE1131</td>
+                <td>CE2131</td>
+                <td>CF1131</td>
+                <td>CF2131</td>
+              </tr>
+              <tr>
+                <td>10Kg</td>
+                <td>CE1132</td>
+                <td>CE2132</td>
+                <td>CF1132</td>
+                <td>CF2132</td>
+              </tr>
+              <tr class="table-info">
+                <td>20Kg</td>
+                <td>CE1133</td>
+                <td>CE2133</td>
+                <td>CF1133</td>
+                <td>CF2133</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Crane Scale Modal -->
+  <div class="modal fade crane-modal" tabindex="-1" role="dialog" aria-labelledby="craneScaleLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="craneScaleLabel">Crane Scales</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img src="http://eng.cas.co.kr/admincenter/files/upload/CASTON%20(THZ)%20en.jpg" width="765" class="img-fluid">
+          <img src="http://eng.cas.co.kr/admincenter/files/upload/CASTON-II%20en.jpg" width="765" class="img-fluid">
+          <img src="http://eng.cas.co.kr/admincenter/files/upload/CASTON-III%20PLUS%20en.jpg" width="765" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floor Scale Modal -->
+  <div class="modal fade floor-modal" tabindex="-1" role="dialog" aria-labelledby="floorScaleLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="floorScaleLabel">Floor Scales</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img src="http://eng.cas.co.kr/admincenter/files/upload/HFS%20en[1].jpg" width="765" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Products End -->
+
+  <!-- Products Retail -->
+
+  <!-- Label / Ticket printing -->
+  <div class="modal fade label-ticket-modal" tabindex="-1" role="dialog" aria-labelledby="label-ticketLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="label-ticketLabel">Label or Ticket Printing</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <center><a href="#" data-toggle="modal" data-target=".labelPrintmodal" class="modalLink"><div class="multiModal"><h6>Label Printing</h6></div></a>
+          <hr>
+          <a href="#" data-toggle="modal" data-target=".ticket-modal" class="modalLink"><div class="multiModal"><h6>Ticket or Bill Printing</h6></div></a></center>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Label -->
+  <div class="modal fade labelPrintmodal" tabindex="-1" role="dialog" aria-labelledby="labelPrintLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="labelPrintLabel">Label Printing</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <center><a href="#" data-toggle="modal" data-target=".cl_5200-modal" class="modalLink"><div class="multiModal"><h6>CAS CL_5200</h6></div></a>
+          <hr>
+          <a href="#" data-toggle="modal" data-target=".sm-100-modal" class="modalLink"><div class="multiModal"><h6>DIGI SM - 100</h6></div></a>
+          <hr>
+          <a href="#" data-toggle="modal" data-target=".sm-100cs-modal" class="modalLink"><div class="multiModal"><h6>DIGI SM - 100CS</h6></div></a></center>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade cl_5200-modal" tabindex="-1" role="dialog" aria-labelledby="cl_5200Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="cl_5200Label">CAS CL_5200</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" width="765" height="315" src="https://www.youtube.com/embed/dBkJV3N54T0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+          <img src="http://eng.cas.co.kr/admincenter/files/upload/CL5200-2[2].jpg" width="765" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade sm-100-modal" tabindex="-1" role="dialog" aria-labelledby="sm-100Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="sm-100Label">DIGI SM - 100</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img src="assets/Retail/label_ticket_print/label_printing/DIGI_SM_100/sm100.jpg" width="765" class="img-fluid">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade sm-100cs-modal" tabindex="-1" role="dialog" aria-labelledby="sm-100csLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="sm-100csLabel">DIGI SM - 100CS</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img src="assets/Retail/label_ticket_print/label_printing/DIGI_SM_100CS/sm100cs.jpg" width="765" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ticket -->
+  <div class="modal fade ticket-modal" tabindex="-1" role="dialog" aria-labelledby="ticketLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="ticketLabel">Ticket or Bill Printing</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <center><a href="#" data-toggle="modal" data-target=".ct-100plus-modal" class="modalLink"><div class="multiModal"><h6>CAS CT-100 Plus</h6></div></a>
+          <hr>
+          <a href="#" data-toggle="modal" data-target=".pr-t-modal" class="modalLink"><div class="multiModal"><h6>CAS PR-T</h6></div></a>
+          <hr>
+          <a href="#" data-toggle="modal" data-target=".rm_60-modal" class="modalLink"><div class="multiModal"><h6>DIGI RM_60</h6></div></a>
+          <hr>
+          <a href="#" data-toggle="modal" data-target=".rm-40ii-modal" class="modalLink"><div class="multiModal"><h6>DIGI RM-40II</h6></div></a></center>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade ct-100plus-modal" tabindex="-1" role="dialog" aria-labelledby="ct-100plusLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="ct-100plusLabel">CAS CT-100 Plus</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/TSTxUcxFbw8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+          <img src="http://eng.cas.co.kr/admincenter/files/upload/CT-100-2[1].jpg" width="765" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade pr-t-modal" tabindex="-1" role="dialog" aria-labelledby="pr-tLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="pr-tLabel">CAS PR-T</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img src="http://eng.cas.co.kr/admincenter/files/upload/PR-T%20en.jpg" width="765" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade rm_60-modal" tabindex="-1" role="dialog" aria-labelledby="rm_60Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="rm_60Label">DIGI RM_60</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img src="assets/Retail/label_ticket_print/ticket_printing/DIGI_RM_60/rm60.jpg" width="765" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade rm-40ii-modal" tabindex="-1" role="dialog" aria-labelledby="rm-40iiLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="rm-40iiLabel">DIGI RM - 40II</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img src="assets/Retail/label_ticket_print/ticket_printing/DIGI_RM-40II/rm40ii.jpg" width="765" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Products End -->
+</body>
+</html>

@@ -22,6 +22,10 @@ app.get('/contact', function(req, res){
 	res.render('pages/contact');
 });
 
+app.get('/loadCell', function(req, res){
+	res.render('pages/load_cell');
+});
+
 app.get('/*', function(req, res){
 	res.render('pages/error');
 });
