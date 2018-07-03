@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <title>Admin Login | Pawan Industries | Total Weighing and Industrial Solution</title>
+    <% include ../partials/header %>
+    <% include ../partials/meta %>
+</head>
+<body>
+<% include ../partials/nav %>
+<br/> 
+<div class="container-fluid pi-banner">
+    <div class="container text-center pi-products-heading">
+        <h1>
+            Admin Login<br/>
+        </h1>
+        <br/> <br/> <br/>
+
+        <form action="/login" method="post">
+            <div>
+                <label>Username:</label>
+                <input type="text" name="username"/><br/>
+            </div>
+            <div>
+                <label>Password:</label>
+                <input type="password" name="password"/>
+            </div>
+            <div>
+                <input type="submit" value="Login"/>
+            </div>
+        </form>
+        <br/> <br/> <br/> <br/>
+    </div>
+</div>
+</div>
+<% include ../partials/footer %>
+</body>
+<script src="/assets/js/registration.js"></script>
+</html>

@@ -1,0 +1,325 @@
+body{
+  background-color: blue;
+}
+
+/* Logo */
+#brand{
+  font-size: 30px;
+  margin-left: 5px;
+  font-family: 'Righteous', cursive;
+  text-transform: uppercase;
+}
+
+/*Navbar*/
+nav{
+  /*background: linear-gradient(to bottom, #7C7C7C, #E1E1E1);*/
+  background-color: #323754;
+}
+/* Navbar Dropdown */
+.navbar .dropdown-menu {
+  border:none;
+  background: linear-gradient(to bottom, #b0b0b0, #fff)!important;
+}
+
+/*Footer*/
+.borderless td, .borderless th {
+    border: none;
+}
+table{
+  font-family: Gill Sans;
+  font-size: 18px;
+}
+#footer{
+  background-color: #191919;
+  color: #fff;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+#foot-tab{
+  color: #7a7a7a;
+}
+th{
+  color: #fff;
+}
+#footer-brand{
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: bold;
+}
+#copyright{
+  color: #7a7a7a;
+}
+#hr{
+  width: 100%;
+  height: 0.5;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  color: #fff;
+}
+#footer-brand{
+  font-size: 18px;
+}
+#t-and-c{
+  padding-left: 16px;
+  color: #7a7a7a;
+}
+#seo-about{
+  text-align: center;
+  color: #7a7a7a;
+}
+
+/*Home*/
+#heading{
+  font-size: 30px;
+  font-family: sans-serif;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  text-transform: uppercase;
+}
+#why{
+  background-color: #eee;
+  padding-bottom: 20px;
+}
+#glyph{
+  color: #00B2FF;
+  text-align: center;
+}
+#why-tag{
+  font-size: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+#business-field{
+  background-color: #343434;
+  color: #fff;
+  padding-bottom: 50px;
+  padding-top: 30px;
+}
+#pic{
+  height: 260px;
+  width: 260px;
+  border-radius: 50%;
+}
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+.overlay:hover .image {
+  opacity: 0.3;
+}
+.overlay:hover .middle {
+  opacity: 1;
+}
+.text {
+  background-color: #00B2FF;
+  border-radius: 3px;
+  color: white;
+  font-size: 16px;
+  padding: 10px 32px;
+}
+
+/*About*/
+#describe{
+  font-size: 19px;
+  text-align: justify;
+}
+
+/*Contact*/
+#map{
+  width:100%;
+  height:60%;
+  background-color: #ccc;
+}
+
+/*Modals*/
+a.deco-none {
+    color:#7a7a7a !important;
+    text-decoration:none;
+}
+a.deco-none:hover {
+    text-decoration:none;
+}
+.modal-body{
+  text-align: justify;
+}
+.multiModal{
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.multiModal:hover{
+  background-color: #efefef;
+  transition: 0.4s;
+}
+a.modalLink{
+  color: #000 !important;
+  text-decoration:none;
+}
+a.modalLink:hover{
+  text-decoration: none;
+}
+#type-image{
+  width: 250px;
+  border-radius: 50%;
+}
+
+/*Loading bar*/
+#load-bar{
+  position:fixed;
+  z-index:99999;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  background:rgba(0,0,0,0.9);
+  transition: 1s 0.4s;
+}
+#progress{
+  height:1px;
+  background:#fff;
+  position:absolute;
+  width:0;
+  top:50%;
+}
+#progstat{
+  font-size:0.7em;
+  letter-spacing: 3px;
+  position:absolute;
+  top:50%;
+  margin-top:-40px;
+  width:100%;
+  text-align:center;
+  color:#fff;
+}
+
+@media screen and (min-width: 992px) {
+  /*Navbar*/
+  .navbar {
+    padding-top:0px;
+    padding-bottom:0px;
+  }
+  .navbar .nav-item {
+    padding:.5rem .5rem;
+    margin:0 .25rem;
+  }
+  .navbar .dropdown {
+    position:static;
+  }
+  .navbar .dropdown-menu {
+    width:100%;
+    left:0;
+    right:0;
+    top:50px;
+  }
+  .navbar .dropdown:hover .dropdown-menu, .navbar .dropdown .dropdown-menu:hover {
+    display:block!important;
+  }
+  .navbar .dropdown-menu {
+    /*border: 1px solid rgba(0,0,0,.15);*/
+    background-color: #fff;
+  }
+
+  /*Corousel*/
+  .carousel #adj-height{
+    height: 450px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /*Logo*/
+  #brand{
+    font-size: 17px;
+  }
+  #logo{
+    height: 30;
+  }
+
+  /*Corousel*/
+  .carousel #adj-height{
+    height: 180px;
+  }
+
+  /*Contact*/
+  #mail-btn{
+    display:none;
+  }
+  #p-head{
+    padding-left: 20px;
+  }
+  #call-btn{
+    display: none;
+  }
+  #addr{
+    font-size: 16px;
+  }
+  #role{
+    font-size: 16px;
+  }
+  #identity{
+    font-size: 18px;
+  }
+  #mailId{
+    font-size: 16px;
+  }
+  #name{
+    font-size: 16px;
+  }
+  /*Contact Ends*/
+  
+  ul{
+    text-align: left;
+  }
+  
+  #item{
+    padding-bottom: 5px;
+    padding-left: 35px;
+  }
+  
+  /*Load Cell*/
+  .loadCell-banner{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  /*Footer*/
+  #footer{
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+  }
+}
+
+/*Page Heading*/
+#head{
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #00B2FF;
+}
+
+/*Load Cell*/
+.card{
+  padding: 10px;
+  margin: 5px;
+}
+.card-img-bottom {
+  color: #fff;
+  background-size: cover;
+}
