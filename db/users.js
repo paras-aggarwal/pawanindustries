@@ -1,8 +1,8 @@
 var records = [
     {
         id: 1,
-        username: "pi1975",
-        password: "Pawan5494"
+        username: ADMIN_USERNAME,
+        password: ADMIN_PASSWORD
     }
 ];
 
