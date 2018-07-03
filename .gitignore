@@ -6,8 +6,8 @@ npm-debug.log*
 # Mac files
 .DS_Store
 
-# Webstorm
-.idea
-
 # Dependency directories
 node_modules/
+
+# Webstorm
+.idea
