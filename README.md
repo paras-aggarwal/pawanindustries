@@ -21,7 +21,6 @@ PAWAN INDUSTRIES provide a wide range of quality weighing products and services 
 
 | Environment Variables | Description |
 | ------ | ------ |
-| PORT | Port number on which server listens e.g. 3000 |
 | MLAB_DB_URI | MongoDB URI |
 | ADMIN_USERNAME | Username for admin access routes |
 | ADMIN_PASSWORD | Password for admin access routes |
