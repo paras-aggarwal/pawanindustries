@@ -25,6 +25,8 @@ PAWAN INDUSTRIES provide a wide range of quality weighing products and services 
 | MLAB_DB_URI | MongoDB URI |
 | ADMIN_USERNAME | Username for admin access routes |
 | ADMIN_PASSWORD | Password for admin access routes |
+| EMAIL_USERNAME | Username for email access |
+| EMAIL_PASSWORD | Password for email access |
 
 ### Clone Repository
 
