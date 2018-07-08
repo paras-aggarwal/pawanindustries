@@ -13,6 +13,7 @@ PAWAN INDUSTRIES provide a wide range of quality weighing products and services 
 | Node.Js | Backend Server |
 | Express | Routing |
 | EJS | Rendering |
+| Nodemailer | SMTP |
 | MongoDB | Database |
 | Google Analytics | Analytics |
 | PassportJs | Authentication |
