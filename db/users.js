@@ -1,8 +1,8 @@
 var records = [
     {
         id: 1,
-        username: ADMIN_USERNAME,
-        password: ADMIN_PASSWORD
+        username: process.env.ADMIN_USERNAME,
+        password: process.env.ADMIN_PASSWORD
     }
 ];
 

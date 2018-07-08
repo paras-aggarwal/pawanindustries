@@ -1,0 +1,66 @@
+<html>
+<head>
+  <% include ../partials/header %>
+  <% include ../partials/meta %>
+  <title>About | Pawan Industries</title>
+
+</head>
+
+<body>
+
+  <header>
+    <div class="row no-gutters">
+      <div class="col-md-12">
+        <% include ../partials/nav %>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Section -->
+  <div class="row no-gutters product-list-a">
+    <div class="col-md-12 mx-auto">
+      <div class="text-center" id="head">Products</div>
+    </div>
+  </div>
+
+  <ul class="product-list">
+    <li>
+      <div class="row">
+        <ul class="col-sm-2 list-unstyled"></ul>                      
+        <ul class="col-sm-3 list-unstyled">
+          <li>
+            <p id="p-head"><strong>INDUSTRIAL SEGMENT</strong></p>
+          </li>
+          <% for(key in product){ %>
+          <% if(product[key].segment == "INDUSTRIAL" && product[key].type == "MAIN" && product[key].visibility == "VISIBLE"){ %>
+          <li id="item"><a href="/products/<%= product[key].alias %>" class="text-dark"> <%= product[key].productName %> </a></li>
+          <% } %>
+          <% } %>
+        </ul>
+        <ul class="col-sm-3 list-unstyled">
+          <li>
+            <p id="p-head"><strong>RETAIL SEGMENT</strong></p>
+          </li>
+          <% for(key in product){ %>
+          <% if(product[key].segment == "RETAIL" && product[key].type == "MAIN" && product[key].visibility == "VISIBLE"){ %>
+          <li id="item"><a href="/products/<%= product[key].alias %>" class="text-dark"> <%= product[key].productName %> </a></li>
+          <% } %>
+          <% } %>
+        </ul>
+        <ul class="col-sm-3 list-unstyled">
+          <li>
+            <p id="p-head"><strong>LABORATORY SEGMENT</strong></p>
+          </li>
+          <% for(key in product){ %>
+          <% if(product[key].segment == "LABORATORY" && product[key].type == "MAIN" && product[key].visibility == "VISIBLE"){ %>
+          <li id="item"><a href="/products/<%= product[key].alias %>" class="text-dark"> <%= product[key].productName %> </a></li>
+          <% } %>
+          <% } %>
+        </ul>
+      </div>
+    </li>
+  </ul> 
+
+  <% include ../partials/footer %>
+</body>
+</html>

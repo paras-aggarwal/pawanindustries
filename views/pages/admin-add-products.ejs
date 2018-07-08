@@ -1,0 +1,139 @@
+<html>
+<head>
+    <% include ../partials/header %>
+    <% include ../partials/meta %>
+    <title>Admin | Pawan Industries | Total Weighing and Industrial Solutions</title>
+</head>
+<body>
+    <div class="row no-gutters">
+        <div class="col-md-12">
+            <% include ../partials/admin-nav %>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                <% include ../partials/admin-menu %>
+            </div>
+            <div class="col-lg-9">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/admin">Admin Home</a></li>
+                        <li class="breadcrumb-item"><a href="/admin/products">View All Products</a></li>
+                        <li class="breadcrumb-item"><a href="/admin/products/add">Add Product</a></li>
+                    </ol>
+                </nav>
+                <br/>
+                <div class="card">
+                    <div class="card-header">
+                        Add New Product
+                    <a href="/admin/products/add">
+                        <button type="button" class="btn btn-primary float-right">+ New Product</button>
+                    </a>
+                    </div>
+                    <div class="card-body">
+                        <% if (!response) { %>
+                        <% } else { %>
+                            <div class="alert alert-info alert-dismissible fade show" role="alert">
+                                <p><%= response %></p>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        <% } %>
+                        <form method="post" action="/admin/products/add">
+
+                        <div class="form-group">
+                            <label for="formGroupExampleInput2">Category</label><br/>
+                            <select class="custom-select" name="category">
+                                <option value="SINGLE">Single</option>
+                                <!-- <option value="MULTIPLE">Multiple</option> -->
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="formGroupExampleInput2">Type</label><br/>
+                            <select class="custom-select" name="type">
+                                <option value="MAIN">Main</option>
+                                <option value="SUB">Sub-Category</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="formGroupExampleInput">Product Name</label>
+                            <input type="text" name="name" class="form-control" id="formGroupExampleInput"
+                                   placeholder="e.g. Tank/Hopper weighing scale" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="formGroupExampleInput2">Product Image (Recommended Online Image Link)</label>
+                            <input type="text" name="product_img" class="form-control" id="formGroupExampleInput2"
+                                   placeholder="e.g. /assets/images/product-icon/algo.png">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="formGroupExampleInput2">Short Description (40-45 Words) (for multi paragraph use &lt;p&gt; tags)</label>
+                            <textarea class="form-control" name="description" id="formGroupExampleInput" placeholder="Short description"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="formGroupExampleInput2">Product Description Image #1 (Recommended Online Image Link)</label>
+                            <input type="text" name="description_img" class="form-control" id="formGroupExampleInput2" placeholder="e.g. /assets/images/product-icon/algo.png">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="formGroupExampleInput2">Product Description Image #2 (Recommended Online Image Link)</label>
+                            <input type="text" name="description_img2" class="form-control" id="formGroupExampleInput2" placeholder="e.g. /assets/images/product-icon/algo.png">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="formGroupExampleInput2">Product Video Link (Copy embed script)</label>
+                            <input type="text" name="videoLink" class="form-control" id="formGroupExampleInput2"
+                                   placeholder="e.g. https://youtu.be/IvEmYHKWfbc">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="formGroupExampleInput">Specifications (Please elaborate specifications)</label>
+                            <textarea class="form-control" name="specifications" id="formGroupExampleInput" placeholder="Use &lt;li&gt; Tags"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="formGroupExampleInput2">Product Dimension Image (Recommended Online Image Link)</label>
+                            <input type="text" name="dimension_img" class="form-control" id="formGroupExampleInput2"
+                                   placeholder="e.g. /assets/images/product-icon/algo.png">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="formGroupExampleInput2">Segment</label><br/>
+                            <select class="custom-select" name="segment">
+                                <option value="INDUSTRIAL">Industrial Weighing Segment</option>
+                                <option value="RETAIL">Retail Weighing Segment</option>
+                                <option value="LABORATORY">Laboratory Weighing Segment</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="formGroupExampleInput2">Alias</label>
+                            <input type="text" name="alias" class="form-control" id="formGroupExampleInput2"
+                                   placeholder="e.g. assets_images_product" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="formGroupExampleInput2">Visibility</label><br/>
+                            <select class="custom-select" name="visibility">
+                                <option value="VISIBLE">Public</option>
+                                <option value="HIDDEN">Only me</option>
+                            </select>
+                        </div>
+
+                        <input type="submit" class="btn btn-primary" value="Add Product">
+                    </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br> <br>
+    <% include ../partials/footer %>
+</body>
+</html>

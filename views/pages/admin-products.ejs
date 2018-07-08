@@ -1,0 +1,68 @@
+<html>
+<head>
+	<% include ../partials/header %>
+	<title>Admin | Pawan Industries | Total Weighing and Industrial Solutions</title>
+</head>
+<body>
+	<div class="row no-gutters">
+    	<div class="col-md-12">
+        	<% include ../partials/admin-nav %>
+      	</div>
+    </div>
+    <div class="container">
+    	<div class="row">
+        	<div class="col-lg-3">
+        	    <% include ../partials/admin-menu %>
+        	</div>
+        	<div class="col-lg-9">
+        	    <nav aria-label="breadcrumb">
+        	        <ol class="breadcrumb">
+        	            <li class="breadcrumb-item"><a href="/admin">Admin Home</a></li>
+                        <li class="breadcrumb-item"><a href="/admin/products">View All Products</a></li>
+        	        </ol>
+        	    </nav>
+        	    <br/>
+        	    <div class="card">
+        	        <div class="card-header">
+        	            View All Products
+                    <a href="/admin/products/add">
+                        <button type="button" class="btn btn-primary float-right">+ New Product</button>
+                    </a>
+        	        </div>
+        	        <div class="card-body">
+        	            <div class="row">
+
+                            <% for(key in product){ %>
+                                <div class="col-lg-6">
+                                    <div class="card" style="width: 18rem;margin:10px;">
+                                        <div class="card-body mx-auto">
+                                            <h5 class="card-title">
+                                                <img height="100px" src="<%= product[key].productImage %>" width="223" alt="Product Thumbnail">
+                                                <br/>
+                                            </h5>
+                                            <p class="card-text"></p>
+                                        </div>
+                                        <div class="card-body">
+                                            <a href="#" class="card-link"><i class="fas fa-pencil-alt"></i> Edit</a>
+                                            <a href="#" class="card-link"><i class="fas fa-minus-circle"></i> Hide</a>
+                                            <a href="#" class="card-link"><i class="far fa-trash-alt"></i> Delete</a><br/>
+                                        </div>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item"><b>Name:</b> <a href="/products/<%= product[key].alias %>" target="new"><%= product[key].productName %> </a></li>
+                                            <li class="list-group-item"><b>Segment:</b> <font color="red"><%= product[key].segment %></font></li>
+                                            <li class="list-group-item"><b>Category:</b> <%= product[key].category %></li>
+                                            <li class="list-group-item"><b>Type:</b> <%= product[key].type %></li> 
+                                            <li class="list-group-item"><b>Created At: </b> <%= product[key].createdAt %></li>
+                                        </ul>       
+                                    </div>
+                                </div>
+                            <% } %>
+                        </div>
+        	        </div>
+        	    </div>
+        	</div>
+    	</div>
+	</div>
+    <% include ../partials/footer %>
+</body>
+</html>

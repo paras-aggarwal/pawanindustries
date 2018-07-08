@@ -1,0 +1,80 @@
+<html lang="en">
+<head>
+    <% include ../partials/header %>
+    <% include ../partials/meta %>
+    <title> <%= product.productName %> | Pawan Industries | Total Weighing and Industrial Solutions</title>
+</head>
+<body>
+<% include ../partials/nav %>
+
+<br />
+
+<div class="row no-gutters">
+    <div class="col-md-12 mx-auto">
+        <div class="text-center" id="head"><%= product.productName %></div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3 thumbnail mx-auto">
+            <img src="<%= product.productImage %>" class="img-fluid" width="250" height="250">
+        </div>
+        <div class="col-lg-9">
+            <% if(!product.description) { %>
+            <% } else { %>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><%= product.description %></li>
+                    </ol>
+                </nav>
+            <% } %>
+
+            <% if(!product.descriptionImage) { %>
+            <% } else { %>
+                <img src="<%= product.descriptionImage %>" class="img-fluid">
+            <% } %>
+
+            <% if(!product.descriptionImage2) { %>
+            <% } else { %>
+                <img src="<%= product.descriptionImage2 %>" class="img-fluid">
+            <% } %>
+
+            <% if(!product.videoLink) { %>
+            <% } else { %>
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe width="560" height="315" src="<%= product.videoLink %>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <%= product.videoLink %>
+                </div>
+                <br>
+            <% } %>
+
+            <% if(!product.specifications) { %>
+            <% } else { %>
+                <div class="row no-gutters">
+                    <div class="col-md-12 mx-auto">
+                        <div class="text-center" id="head">Specifications</div>
+                    </div>
+                </div>
+                <ul>
+                    <%- product.specifications %>
+                </ul>
+                <br>
+            <% } %>
+            <% if(!product.dimension) { %>
+            <% } else { %>
+                <div class="row no-gutters">
+                    <div class="col-md-12 mx-auto">
+                        <div class="text-center" id="head">Dimensions</div>
+                    </div>
+                </div>
+                <img src="<%= product.dimension %>" class="img-fluid">
+            <% } %>
+        </div>
+    </div>
+</div>
+
+<% include ../partials/footer %>
+
+</body>
+</html>

@@ -33,7 +33,7 @@ passport.deserializeUser(function (id, cb) {
 
 module.exports = function (app) {
 
-	// app.use(require('morgan')('combined'));		// To show access details
+	app.use(require('morgan')('combined'));		// To show access details
     app.use(require('cookie-parser')());
     app.use(require('body-parser').urlencoded({extended: true}));
     app.use(require('express-session')({secret: 'keyboard cat', resave: false, saveUninitialized: false}));
@@ -41,12 +41,28 @@ module.exports = function (app) {
     app.use(passport.initialize());
     app.use(passport.session());
 
+    app.get('/', function(req, res){
+        res.render('pages/home');
+    });
+
+    app.get('/about', function(req, res){
+        res.render('pages/about');
+    });
+
+    app.get('/contact', function(req, res){
+        res.render('pages/contact');
+    });
+
+    app.get('/loadCell', function(req, res){
+        res.render('pages/load_cell');
+    });
+
+    app.get('/privacy', function(req, res){
+        res.render('pages/privacy');
+    })
+
     app.get('/admin', require('connect-ensure-login').ensureLoggedIn(), function(req, res){
 		res.render('pages/dashboard');
-	});
-
-    app.get('/admin/products', function(req, res){
-		res.render('pages/add-products');
 	});
 
 	app.get('/login', function(req, res){
