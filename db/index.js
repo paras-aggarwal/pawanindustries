@@ -57,8 +57,8 @@ module.exports = function (app) {
             port: 587,
             secure: false,
             auth: {
-                user: 'sales@pawanindustries.tech',
-                pass: 'Pawan@5494'
+                user: EMAIL_USERNAME,
+                pass: EMAIL_PASSWORD
             }
         });
 
