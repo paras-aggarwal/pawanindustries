@@ -17,7 +17,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-lg-3 thumbnail mx-auto">
+        <div class="col-lg-3 thumbnail">
             <img src="<%= product.productImage %>" class="img-fluid" width="250" height="250">
         </div>
         <div class="col-lg-9">
@@ -25,26 +25,25 @@
             <% } else { %>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><%= product.description %></li>
+                        <li class="breadcrumb-item"><%- product.description %></li>
                     </ol>
                 </nav>
             <% } %>
 
             <% if(!product.descriptionImage) { %>
             <% } else { %>
-                <img src="<%= product.descriptionImage %>" class="img-fluid">
+                <img src="<%= product.descriptionImage %>" class="img-fluid" width="826">
             <% } %>
 
             <% if(!product.descriptionImage2) { %>
             <% } else { %>
-                <img src="<%= product.descriptionImage2 %>" class="img-fluid">
+                <img src="<%= product.descriptionImage2 %>" class="img-fluid" width="826">
             <% } %>
 
             <% if(!product.videoLink) { %>
             <% } else { %>
                 <div class="embed-responsive embed-responsive-16by9">
                     <iframe width="560" height="315" src="<%= product.videoLink %>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                    <%= product.videoLink %>
                 </div>
                 <br>
             <% } %>
@@ -72,6 +71,7 @@
             <% } %>
         </div>
     </div>
+
 </div>
 
 <% include ../partials/footer %>

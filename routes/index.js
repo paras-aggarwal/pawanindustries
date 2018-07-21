@@ -57,13 +57,25 @@ module.exports = function (app) {
         res.render('pages/load_cell');
     });
 
+    app.get('/terms', function(req, res){
+        res.render('pages/terms');
+    });
+
     app.get('/privacy', function(req, res){
         res.render('pages/privacy');
-    })
+    });
 
     app.get('/admin', require('connect-ensure-login').ensureLoggedIn(), function(req, res){
 		res.render('pages/dashboard');
 	});
+
+    app.get('/admin/products/add', require('connect-ensure-login').ensureLoggedIn(), function(req, res){
+        res.render('pages/admin-add-products', {response: ""});
+    });
+
+    app.get('/admin/sent/sendmail', require('connect-ensure-login').ensureLoggedIn(), function(req, res){
+        res.render('pages/webmail', {response: ""});
+    });
 
 	app.get('/login', function(req, res){
 		res.render('pages/login');

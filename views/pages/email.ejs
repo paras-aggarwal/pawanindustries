@@ -1,0 +1,86 @@
+<html>
+<head>
+    <% include ../partials/header %>
+    <% include ../partials/meta %>
+    <title>Admin Panel | Pawan Industries | Total Weighing and Industrial Solutions</title>
+</head>
+<body>
+  <div class="row no-gutters">
+    <div class="col-md-12">
+      <% include ../partials/admin-nav %>
+    </div>
+  </div>
+    
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3">
+        <% include ../partials/admin-menu %>
+      </div>
+      <div class="col-lg-9">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/admin">Admin Home</a></li>
+            <li class="breadcrumb-item"><a href="/admin/sent">View Sent Mails</a></li>
+          </ol>
+        </nav>
+        
+        <br/>
+        
+        <div class="card">
+          <div class="card-header">
+            Sent Mail
+          </div>
+          <div class="card-body">
+            <form>
+
+              <div class="form-group row">
+                <label for="formGroupExampleInput" class="col-md-2 col-form-label"><b>To:</b></label>
+                <div class="col-md">
+                  <input type="text" name="recipient" class="form-control" id="formGroupExampleInput" value="<%= mail.recipient %>" disabled>
+                </div>
+              </div>
+                        
+              <% if(!mail.cc) { %>
+              <% } else { %>
+                <div class="form-group row">
+                  <label for="formGroupExampleInput" class="col-md-2 col-form-label"><b>CC:</b></label>
+                  <div class="col-md">
+                    <input type="text" name="cc" class="form-control" id="formGroupExampleInput" value="<%= mail.cc %>" disabled>
+                  </div>
+                </div>
+              <% } %>
+
+              <% if(!mail.bcc) { %>
+              <% } else { %>
+                <div class="form-group row">
+                  <label for="formGroupExampleInput" class="col-md-2 col-form-label"><b>BCC:</b></label>
+                  <div class="col-md">
+                    <input type="text" name="BCC" class="form-control" id="formGroupExampleInput" value="<%= mail.bcc %>" disabled>
+                  </div>
+                </div>
+              <% } %>
+
+              <div class="form-group row">
+                <label for="formGroupExampleInput2" class="col-md-2 col-form-label"><b>Subject:</b></label>
+                <div class="col-md">
+                  <input type="text" name="subject" class="form-control" id="formGroupExampleInput2" value="<%= mail.subject %>" disabled>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="formGroupExampleInput" class="col-md-2 col-form-label"><b>Message:</b></label>
+              </div>          
+              <hr>
+                        
+              <%- mail.message %>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br> <br>
+  <% include ../partials/footer %>
+</body>
+</html>

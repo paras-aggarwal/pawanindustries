@@ -1,32 +1,31 @@
 <html>
 <head>
-
-  <title>404 Page Not Found - Pawan Industries</title>
-  <link href="https://a1.muscache.com/airbnb/static/packages/common_o2.1-f8a73ee0d4378e3442aa7772f248998e.css" media="all" rel="stylesheet" type="text/css">
   <% include ../partials/header %>
-</head>
+  <% include ../partials/meta %>
+  <title>404 Page Not Found | Pawan Industries</title>
 
+</head>
 <body>
 
-  <header class="page-container page-container-responsive space-top-4">
-    <a class="navbar-brand" href="/"><span id="brand">PAWAN INDUSTRIES</span></a>
+  <header>
+    <div class="row no-gutters">
+      <div class="col-md-12">
+        <% include ../partials/nav %>
+      </div>
+    </div>
   </header>
-
-  <div class="page-container page-container-responsive">
-    <div class="row space-top-8 space-8 row-table">
-
-      <div class="col-5 col-middle">
-        <h1 class="text-jumbo text-ginormous">Oops!</h1>
-        <h2>We can't seem to find the page you're looking for.</h2>
-        <h3>Error code: 404</h3>
-      </div>
-
-      <div class="col-5 col-middle text-center">
-        <img src="https://a0.muscache.com/airbnb/static/error_pages/404-Airbnb_final-d652ff855b1335dd3eedc3baa8dc8b69.gif" width="313" height="428" alt="Girl has dropped her ice cream.">
-      </div>
-      
+  
+  <div class="row no-gutters">
+    <div class="col-md-12 error-paddings-size">
+      <center>
+        <h1>Oops!</h1>
+        <h3>We can't seem to find the page you're looking for.</h3>
+        <h4>Error code: 404</h4>
+      </center>
     </div>
   </div>
 
+  <% include ../partials/footer %>
+ 
 </body>
 </html>

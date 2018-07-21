@@ -1,0 +1,58 @@
+<html>
+<head>
+  <% include ../partials/header %>
+  <title>Admin | Pawan Industries | Total Weighing and Industrial Solutions</title>
+</head>
+<body>
+  <div class="row no-gutters">
+      <div class="col-md-12">
+          <% include ../partials/admin-nav %>
+        </div>
+    </div>
+    <div class="container">
+      <div class="row">
+          <div class="col-lg-3">
+              <% include ../partials/admin-menu %>
+          </div>
+          <div class="col-lg-9">
+              <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                      <li class="breadcrumb-item active"><a href="/admin">Admin Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">View Sent Mails</li>
+                  </ol>
+              </nav>
+              <br/>
+              <div class="card">
+                  <div class="card-header">
+                      Sent Mails
+                    <a href="/admin/sent/sendmail">
+                        <button type="button" class="btn btn-primary float-right">+ Compose</button>
+                    </a>
+                  </div>
+                  <div class="card-body">
+                      <div class="row">
+
+                            <% for(key in mail){ %>
+                                <div class="card mail-card-size">
+                                  <a href="/admin/sent/<%= mail[key].alias %>">
+                                    <div class="card-body">
+                                      <b>To: </b><%= mail[key].recipient %><br>
+                                      <b>Subject: </b><%= mail[key].subject %><br>
+                                      <b>Sent On: </b><font color="green"><%= mail[key].sentOn %></font><br>
+                                    </div>
+                                    <div class="btn-row">
+                                      <a href="/admin/sent/delete/<%= mail[key].alias %>"><button class="btn btn-outline-danger pull-right"><i class="fas fa-trash"></i> Delete</button></a>
+                                      <a href="/admin/sent/forward/<%= mail[key].alias %>"><button type="button" class="btn btn-outline-info">Forward <i class="fas fa-reply"></i></button></a>
+                                    </div>
+                                  </a>
+                                </div>
+                            <% } %>
+                        </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+    <% include ../partials/footer %>
+</body>
+</html>

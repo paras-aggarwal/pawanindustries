@@ -23,18 +23,21 @@
     </div>
   </div>
 
-  <ul class="product-list">
+  <ul class="product-list list-unstyled">
     <li>
       <div class="row">
-        <ul class="col-sm-2 list-unstyled"></ul>                      
+        <div class="col-sm-2"></div>                     
         <ul class="col-sm-3 list-unstyled">
           <li>
             <p id="p-head"><strong>INDUSTRIAL SEGMENT</strong></p>
           </li>
           <% for(key in product){ %>
-          <% if(product[key].segment == "INDUSTRIAL" && product[key].type == "MAIN" && product[key].visibility == "VISIBLE"){ %>
-          <li id="item"><a href="/products/<%= product[key].alias %>" class="text-dark"> <%= product[key].productName %> </a></li>
-          <% } %>
+            <% if(product[key].segment == "INDUSTRIAL" && product[key].type == "MAIN" && product[key].visibility == "VISIBLE" && product[key].category == "SINGLE"){ %>
+              <li id="item"><a href="/products/<%= product[key].alias %>" class="text-dark"> <%= product[key].productName %> </a></li>
+            <% } %>
+            <% if(product[key].segment == "INDUSTRIAL" && product[key].type == "MAIN" && product[key].visibility == "VISIBLE" && product[key].category == "MULTIPLE"){ %>
+              <li id="item"><a href="/products/sub/<%= product[key].alias %>" class="text-dark"> <%= product[key].productName %> </a></li>
+            <% } %>
           <% } %>
         </ul>
         <ul class="col-sm-3 list-unstyled">
@@ -42,9 +45,12 @@
             <p id="p-head"><strong>RETAIL SEGMENT</strong></p>
           </li>
           <% for(key in product){ %>
-          <% if(product[key].segment == "RETAIL" && product[key].type == "MAIN" && product[key].visibility == "VISIBLE"){ %>
-          <li id="item"><a href="/products/<%= product[key].alias %>" class="text-dark"> <%= product[key].productName %> </a></li>
-          <% } %>
+            <% if(product[key].segment == "RETAIL" && product[key].type == "MAIN" && product[key].visibility == "VISIBLE" && product[key].category == "SINGLE"){ %>
+              <li id="item"><a href="/products/<%= product[key].alias %>" class="text-dark"> <%= product[key].productName %> </a></li>
+            <% } %>
+            <% if(product[key].segment == "RETAIL" && product[key].type == "MAIN" && product[key].visibility == "VISIBLE" && product[key].category == "MULTIPLE"){ %>
+              <li id="item"><a href="/products/sub/<%= product[key].alias %>" class="text-dark"> <%= product[key].productName %> </a></li>
+            <% } %>
           <% } %>
         </ul>
         <ul class="col-sm-3 list-unstyled">
@@ -52,14 +58,17 @@
             <p id="p-head"><strong>LABORATORY SEGMENT</strong></p>
           </li>
           <% for(key in product){ %>
-          <% if(product[key].segment == "LABORATORY" && product[key].type == "MAIN" && product[key].visibility == "VISIBLE"){ %>
-          <li id="item"><a href="/products/<%= product[key].alias %>" class="text-dark"> <%= product[key].productName %> </a></li>
-          <% } %>
+            <% if(product[key].segment == "LABORATORY" && product[key].type == "MAIN" && product[key].visibility == "VISIBLE" && product[key].category == "SINGLE"){ %>
+              <li id="item"><a href="/products/<%= product[key].alias %>" class="text-dark"> <%= product[key].productName %> </a></li>
+            <% } %>
+            <% if(product[key].segment == "LABORATORY" && product[key].type == "MAIN" && product[key].visibility == "VISIBLE" && product[key].category == "MULTIPLE"){ %>
+              <li id="item"><a href="/products/sub/<%= product[key].alias %>" class="text-dark"> <%= product[key].productName %> </a></li>
+            <% } %>
           <% } %>
         </ul>
       </div>
     </li>
-  </ul> 
+  </ul>
 
   <% include ../partials/footer %>
 </body>

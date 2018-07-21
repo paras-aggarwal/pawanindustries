@@ -21,28 +21,19 @@
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item active"><a href="/admin">Admin Home</a></li>
                         <li class="breadcrumb-item active"><a href="/admin/products">View All Products</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Add Product</li>
+                        <li class="breadcrumb-item active" aria-current="page">Edit Product</li>
                     </ol>
                 </nav>
                 <br/>
                 <div class="card">
                     <div class="card-header">
-                        Add New Product
+                        Edit Product
                     <a href="/admin/products/add">
                         <button type="button" class="btn btn-primary float-right">+ New Product</button>
                     </a>
                     </div>
                     <div class="card-body">
-                        <% if (!response) { %>
-                        <% } else { %>
-                            <div class="alert alert-info alert-dismissible fade show" role="alert">
-                                <p><%= response %></p>
-                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                        <% } %>
-                        <form method="post" action="/admin/products/add">
+                        <form method="post" action="/admin/products/edit/<%= product.alias %>">
 
                         <div class="form-group">
                             <label for="category">Category</label><br/>
@@ -63,51 +54,47 @@
                         <div class="form-group">
                             <label for="parent">Parent Alias (Mandatory if Type = Sub-Category)</label>
                             <input type="text" name="parent" class="form-control" id="parent"
-                                   placeholder="e.g. Demo_Product_Alias">
+                                   value = "<%= product.parent %>">
                         </div>
 
                         <div class="form-group">
                             <label for="name">Product Name</label>
-                            <input type="text" name="name" class="form-control" id="name"
-                                   placeholder="e.g. Demo Machine" required>
+                            <input type="text" name="name" class="form-control" id="name" value="<%= product.productName %>" required>
                         </div>
 
                         <div class="form-group">
                             <label for="product_img">Product Image (Recommended Online Image Link)</label>
-                            <input type="text" name="product_img" class="form-control" id="product_img"
-                                   placeholder="e.g. /assets/images/product-icon/algo.png">
+                            <input type="text" name="product_img" class="form-control" id="product_img" value="<%= product.productImage %>">
                         </div>
 
                         <div class="form-group">
                             <label for="description">Product Description</label>
-                            <textarea class="form-control" name="description" id="description"></textarea>
+                            <textarea class="form-control" name="description" id="description"><%- product.description %></textarea>
                         </div>
 
                         <div class="form-group">
                             <label for="description_img">Product Description Image #1 (Recommended Online Image Link)</label>
-                            <input type="text" name="description_img" id="description_img" class="form-control" placeholder="e.g. /assets/images/product-icon/algo.png">
+                            <input type="text" name="description_img" id="description_img" class="form-control" value="<%= product.descriptionImage %>">
                         </div>
 
                         <div class="form-group">
                             <label for="description_img2">Product Description Image #2 (Recommended Online Image Link)</label>
-                            <input type="text" name="description_img2" id="description_img2" class="form-control" placeholder="e.g. /assets/images/product-icon/algo.png">
+                            <input type="text" name="description_img2" id="description_img2" class="form-control" value="<%= product.descriptionImage2 %>">
                         </div>
 
                         <div class="form-group">
                             <label for="videoLink">Product Video Link (Copy embed script link)</label>
-                            <input type="text" name="videoLink" class="form-control" id="videoLink"
-                                   placeholder="e.g. https://youtu.be/IvEmYHKWfbc">
+                            <input type="text" name="videoLink" class="form-control" id="videoLink" value="<%= product.videoLink %>">
                         </div>
 
                         <div class="form-group">
                             <label for="specifications">Specifications</label>
-                            <textarea class="form-control" name="specifications" id="specifications"></textarea>
+                            <textarea class="form-control" name="specifications" id="specifications"><%- product.specifications %></textarea>
                         </div>
 
                         <div class="form-group">
                             <label for="dimension_img">Product Dimension Image (Recommended Online Image Link)</label>
-                            <input type="text" name="dimension_img" class="form-control" id="dimension_img"
-                                   placeholder="e.g. /assets/images/product-icon/algo.png">
+                            <input type="text" name="dimension_img" class="form-control" id="dimension_img" value="<%= product.dimension_img %>">
                         </div>
 
                         <div class="form-group">
@@ -121,7 +108,7 @@
 
                         <div class="form-group">
                             <label for="alias">Alias</label>
-                            <input type="text" name="alias" class="form-control" id="alias" placeholder="e.g. assets_images_product" required>
+                            <input type="text" name="alias" class="form-control" id="alias" value="<%= product.alias %>" required>
                         </div>
 
                         <div class="form-group">
@@ -132,7 +119,7 @@
                             </select>
                         </div>
 
-                        <input type="submit" class="btn btn-primary" value="Add Product">
+                        <input type="submit" class="btn btn-primary" value="Save">
                     </form>
                     <script>
                         CKEDITOR.replace('description');
