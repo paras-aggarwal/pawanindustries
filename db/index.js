@@ -63,11 +63,6 @@ module.exports = function (app) {
             alias: alias,
             sentOn: new Date()
         });
-        newMail.save(function (err, data) {
-            if (err) 
-                return console.error(err);
-            res.render('pages/webmail', {response: "Email Sent!"});
-        });
 
         var recipient = req.body.recipient;
         var cc = req.body.cc;
@@ -77,9 +72,12 @@ module.exports = function (app) {
         var message = req.body.message;
         var structure = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="X-UA-Compatible" content="IE=edge"></head><body style="border:2px solid #f3f3f3;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;background-color:#eee;height:100%!important;margin:0!important;padding:0!important;width:100%!important" bgcolor="#eeeeee"><style type="text/css">@media screen and (max-width:480px){.mobile-hide{display:none!important}.mobile-center{text-align:center!important}}</style><table border="0" cellpadding="0" cellspacing="0" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-collapse:collapse!important;mso-table-lspace:0;mso-table-rspace:0"><tbody><tr><td align="center" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;background-color:#eee;mso-table-lspace:0;mso-table-rspace:0" bgcolor="#eeeeee"><table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-collapse:collapse!important;max-width:600px;mso-table-lspace:0;mso-table-rspace:0"><tbody><tr><td align="center" valign="top" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-family:Open Sans,Helvetica,Arial,sans-serif;font-size:36px;font-weight:800;line-height:48px;mso-table-lspace:0;mso-table-rspace:0;padding:35px" bgcolor="#323754"><h1 style="font-size:25px;font-weight:750;margin:0;color:#fff">PAWAN INDUSTRIES</h1></td></tr><tr><td align="center" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;background-color:#fff;mso-table-lspace:0;mso-table-rspace:0;padding:35px" bgcolor="#ffffff"><table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-collapse:collapse!important;max-width:600px;mso-table-lspace:0;mso-table-rspace:0"><tbody><tr><td align="left" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-family:Open Sans,Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:24px;mso-table-lspace:0;mso-table-rspace:0"><p style="font-size:16px;font-weight:400;line-height:24px;color:#777">'+message+'</p></td></tr></tbody></table></td></tr><tr></tr><tr><td align="center" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;background-color:#1b9ba3;border-bottom:20px solid #48afb5;mso-table-lspace:0;mso-table-rspace:0;padding:35px" bgcolor="#1b9ba3"><table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-collapse:collapse!important;max-width:600px;mso-table-lspace:0;mso-table-rspace:0"><tbody><tr><td align="center" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0;mso-table-rspace:0"><table style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-collapse:collapse!important;mso-table-lspace:0;mso-table-rspace:0"><tbody><tr><td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0;mso-table-rspace:0;padding:0 10px"><a href="https://www.facebook.com/pawanindustries/" target="_blank" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%"><img src="https://pawanindustries.herokuapp.com/assets/social/facebook-icon.png" style="-ms-interpolation-mode:bicubic;border:0;height:auto;line-height:100%;outline:0;text-decoration:none"></a></td><td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0;mso-table-rspace:0;padding:0 10px"><a href="https://www.facebook.com/pawanindustries/" target="_blank" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%"><img src="https://pawanindustries.herokuapp.com/assets/social/instagram-icon.png" style="-ms-interpolation-mode:bicubic;border:0;height:auto;line-height:100%;outline:0;text-decoration:none"></a></td><td style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0;mso-table-rspace:0;padding:0 10px"><a href="https://www.facebook.com/pawanindustries/" target="_blank" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%"><img src="https://pawanindustries.herokuapp.com/assets/social/google-plus-icon.png" style="-ms-interpolation-mode:bicubic;border:0;height:auto;line-height:100%;outline:0;text-decoration:none"></a></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr><td align="center" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;background-color:#fff;mso-table-lspace:0;mso-table-rspace:0;padding:35px" bgcolor="#ffffff"><table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;border-collapse:collapse!important;max-width:600px;mso-table-lspace:0;mso-table-rspace:0"><tbody><tr><td align="center" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;mso-table-lspace:0;mso-table-rspace:0"><img src="https://pawanindustries.herokuapp.com/assets/logo-pawan.png" width="55" height="55" style="-ms-interpolation-mode:bicubic;border:0;display:block;height:auto;line-height:100%;outline:0;text-decoration:none"></td></tr><tr><td align="center" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-family:Open Sans,Helvetica,Arial,sans-serif;font-size:14px;font-weight:400;line-height:24px;mso-table-lspace:0;mso-table-rspace:0;padding:5px 0 10px 0"><p style="font-size:14px;font-weight:800;line-height:18px;color:#333">PAWAN INDUSTRIES<br>Opp. Housing Board Colony, Naraingarh Road,<br>Ambala City - 134007</p></td></tr><tr><td align="left" style="-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-family:Open Sans,Helvetica,Arial,sans-serif;font-size:14px;font-weight:400;line-height:24px;mso-table-lspace:0;mso-table-rspace:0"><hr><p style="font-size:14px;font-weight:400;line-height:20px;color:#777"><b>Contact Info: </b>+91 9416026344, +91 9992079494<br><b>Email: </b>sales@pawanindustries.tech</p></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></body></html>';
 
-        if(subject == "")
-            subject = "<no subject>";
-
+        newMail.save(function (err, data) {
+            if (err) 
+                return console.error(err);
+            res.render('pages/webmail', {response: "Email Sent!"});
+        });
+        
         let transporter = nodemailer.createTransport({
             host: 'us2.smtp.mailhostbox.com',
             port: 587,
@@ -119,8 +117,8 @@ module.exports = function (app) {
         });
     });
 
-    app.get('/admin/sent/:alias', require('connect-ensure-login').ensureLoggedIn(), function(req, res){
-        Mail.findOne({'alias': req.params.alias}, function (err, m_data) {
+    app.get('/admin/sent/:id', require('connect-ensure-login').ensureLoggedIn(), function(req, res){
+        Mail.findOne({'_id': req.params.id}, function (err, m_data) {
             if (err)
                 console.error(err);
             else {
@@ -129,8 +127,8 @@ module.exports = function (app) {
         });
     });
 
-    app.get('/admin/sent/delete/:alias', function(req, res) {
-        Mail.findOneAndDelete({'alias': req.params.alias}, function(err, m_data) {
+    app.get('/admin/sent/delete/:id', function(req, res) {
+        Mail.findOneAndDelete({'_id': req.params.id}, function(err, m_data) {
             if(err)
                 console.error(err);
             else {
@@ -139,8 +137,8 @@ module.exports = function (app) {
         });
     });
 
-    app.get('/admin/sent/forward/:alias', function(req, res) {
-        Mail.findOne({'alias': req.params.alias}, function(err, m_data) {
+    app.get('/admin/sent/forward/:id', function(req, res) {
+        Mail.findOne({'_id': req.params.id}, function(err, m_data) {
             if(err)
                 console.error(err);
             else {
@@ -205,7 +203,7 @@ module.exports = function (app) {
     		productImage: req.body.product_img,
     		description: req.body.description,
     		descriptionImage: req.body.description_img,
-            descriptionImage2: req.body.decription_img2,
+            descriptionImage2: req.body.description_img2,
     		videoLink: req.body.videoLink,
     		specifications: req.body.specifications,
     		dimensionImage: req.body.dimension_img,
@@ -270,7 +268,7 @@ module.exports = function (app) {
             'productImage': req.body.product_img,
             'description': req.body.description,
             'descriptionImage': req.body.description_img,
-            'descriptionImage2': req.body.decription_img2,
+            'descriptionImage2': req.body.description_img2,
             'videoLink': req.body.videoLink,
             'specifications': req.body.specifications,
             'dimensionImage': req.body.dimension_img,

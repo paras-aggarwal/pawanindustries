@@ -1,36 +1,38 @@
 <html>
+
 <head>
-	<% include ../partials/header %>
-	<title>Admin | Pawan Industries | Total Weighing and Industrial Solutions</title>  
+    <% include ../partials/header %>
+        <title>Admin | Pawan Industries | Total Weighing and Industrial Solutions</title>
 </head>
+
 <body>
-	<div class="row no-gutters">
-    	<div class="col-md-12">
-        	<% include ../partials/admin-nav %>
-      	</div>
+    <div class="row no-gutters">
+        <div class="col-md-12">
+            <% include ../partials/admin-nav %>
+        </div>
     </div>
     <div class="container">
-    	<div class="row">
-        	<div class="col-lg-3">
-        	    <% include ../partials/admin-menu %>
-        	</div>
-        	<div class="col-lg-9">
-        	    <nav aria-label="breadcrumb">
-        	        <ol class="breadcrumb">
-        	            <li class="breadcrumb-item active"><a href="/admin">Admin Home</a></li>
+        <div class="row">
+            <div class="col-lg-3">
+                <% include ../partials/admin-menu %>
+            </div>
+            <div class="col-lg-9">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item active"><a href="/admin" class="admin-link">Admin Home</a></li>
                         <li class="breadcrumb-item active" aria-current="page">View All Products</li>
-        	        </ol>
-        	    </nav>
-        	    <br/>
-        	    <div class="card">
-        	        <div class="card-header">
-        	            View All Products
-                    <a href="/admin/products/add">
-                        <button type="button" class="btn btn-primary float-right">+ New Product</button>
-                    </a>
-        	        </div>
-        	        <div class="card-body">
-        	            <div class="row">
+                    </ol>
+                </nav>
+                <br/>
+                <div class="card">
+                    <div class="card-header">
+                        View All Products
+                        <a href="/admin/products/add">
+                            <button type="button" class="btn nav-btn-admin float-right">+ New Product</button>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
 
                             <% for(key in product){ %>
                                 <div class="col-lg-6">
@@ -42,30 +44,36 @@
                                                 <br/>
                                             </h5>
 
-                                            <a href="/admin/products/edit/<%= product[key].alias %>" class="card-link"><i class="fas fa-pencil-alt"></i> Edit</a>
+                                            <a href="/admin/products/edit/<%= product[key].alias %>" class="card-link admin-link"><i class="fas fa-pencil-alt"></i> Edit</a>
                                             <% if(product[key].visibility == "VISIBLE") { %>
-                                                <a href="/admin/products/hide/<%= product[key].alias %>" class="card-link"><i class="fas fa-minus-circle"></i> Hide</a>
-                                            <% } else { %>
-                                                <a href="/admin/products/show/<%= product[key].alias %>" id="showProduct" class="card-link"><i class="fas fa-eye"></i> Show</a>
-                                            <% } %>
-                                            <a href="/admin/products/delete/<%= product[key].alias %>" class="card-link"><i class="far fa-trash-alt"></i> Delete</a><br/>
+                                                <a href="/admin/products/hide/<%= product[key].alias %>" class="card-link admin-link"><i class="fas fa-minus-circle"></i> Hide</a>
+                                                <% } else { %>
+                                                    <a href="/admin/products/show/<%= product[key].alias %>" id="showProduct" class="card-link admin-link"><i class="fas fa-eye"></i> Show</a>
+                                                    <% } %>
+                                                        <a href="/admin/products/delete/<%= product[key].alias %>" class="card-link admin-link"><i class="far fa-trash-alt"></i> Delete</a>
+                                                        <br/>
                                         </div>
 
                                         <ul class="list-group list-group-flush">
-                                            <li class="list-group-item"><b>Name:</b> <a href="/products/<%= product[key].alias %>" target="new"><%= product[key].productName %> </a></li>
+                                            <li class="list-group-item"><b>Name:</b>
+                                                <a href="/products/<%= product[key].alias %>" target="new" class="admin-link">
+                                                    <%= product[key].productName %>
+                                                </a>
+                                            </li>
                                             <li class="list-group-item"><b>Segment:</b> <font color="red"><%= product[key].segment %></font></li>
                                             <li class="list-group-item"><b>Alias:</b> <font size="2"><%= product[key].alias %></font></li>
                                             <li class="list-group-item"><b>Visibility: </b> <kbd><%= product[key].visibility %></kbd></li>
-                                        </ul>       
+                                        </ul>
                                     </div>
                                 </div>
-                            <% } %>
+                                <% } %>
                         </div>
-        	        </div>
-        	    </div>
-        	</div>
-    	</div>
-	</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <% include ../partials/footer %>
 </body>
+
 </html>

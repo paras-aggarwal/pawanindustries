@@ -1,10 +1,12 @@
 <html>
+
 <head>
     <% include ../partials/header %>
-    <% include ../partials/meta %>
-    <title>Admin Panel | Pawan Industries | Total Weighing and Industrial Solutions</title>
-    <script src="/js/data.min.js"></script>
+        <% include ../partials/meta %>
+            <title>Admin Panel | Pawan Industries | Total Weighing and Industrial Solutions</title>
+            <script src="/js/data.min.js"></script>
 </head>
+
 <body>
     <div class="row no-gutters">
         <div class="col-md-12">
@@ -19,8 +21,8 @@
             <div class="col-lg-9">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item active"><a href="/admin">Admin Home</a></li>
-                        <li class="breadcrumb-item active"><a href="/admin/sent">View Sent Mails</a></li>
+                        <li class="breadcrumb-item active"><a href="/admin" class="admin-link">Admin Home</a></li>
+                        <li class="breadcrumb-item active"><a href="/admin/sent" class="admin-link">View Sent Mails</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Compose Mail</li>
                     </ol>
                 </nav>
@@ -44,28 +46,28 @@
                                 <label for="formGroupExampleInput" class="col-md-2 col-form-label">To:</label>
                                 <div class="col-md">
                                     <input type="text" name="recipient" class="form-control" id="recipient" placeholder="e.g. stevejobs@apple.com" required>
-                               </div>
+                                </div>
                             </div>
 
                             <div class="form-group row">
                                 <label for="formGroupExampleInput" class="col-md-2 col-form-label">CC:</label>
                                 <div class="col-md">
                                     <input type="text" name="cc" class="form-control" id="cc" placeholder="e.g. stevejobs@apple.com">
-                               </div>
+                                </div>
                             </div>
 
                             <div class="form-group row">
                                 <label for="formGroupExampleInput" class="col-md-2 col-form-label">BCC:</label>
                                 <div class="col-md">
                                     <input type="text" name="bcc" class="form-control" id="bcc" placeholder="e.g. stevejobs@apple.com">
-                               </div>
+                                </div>
                             </div>
 
                             <div class="form-group row">
                                 <label for="formGroupExampleInput2" class="col-md-2 col-form-label">Subject:</label>
                                 <div class="col-md">
                                     <input type="text" name="subject" class="form-control" id="subject" placeholder="e.g. Eater Boston">
-                               </div>
+                                </div>
                             </div>
 
                             <div class="form-group row">
@@ -90,14 +92,32 @@
                                 var quill = new Quill('#message', {
                                     modules: {
                                         toolbar: [
-                                            [{header: [1, 2, 3, 4, 5, false]}],
+                                            [{
+                                                header: [1, 2, 3, 4, 5, false]
+                                            }],
                                             ['bold', 'italic', 'underline', 'strike'],
                                             ['blockquote', 'link', 'image'],
-                                            [{'list': 'ordered'}, {'list': 'bullet'}],
-                                            [{'script': 'sub'}, {'script': 'super'}],
-                                            [{'size': ['small', false, 'large', 'huge'] }],
-                                            [{'color': []}, {'background': []}],
-                                            [{'align': []}]
+                                            [{
+                                                'list': 'ordered'
+                                            }, {
+                                                'list': 'bullet'
+                                            }],
+                                            [{
+                                                'script': 'sub'
+                                            }, {
+                                                'script': 'super'
+                                            }],
+                                            [{
+                                                'size': ['small', false, 'large', 'huge']
+                                            }],
+                                            [{
+                                                'color': []
+                                            }, {
+                                                'background': []
+                                            }],
+                                            [{
+                                                'align': []
+                                            }]
                                         ]
                                     },
                                     placeholder: 'Write your message',
@@ -106,13 +126,15 @@
                             </script>
 
                         </form>
-                        <input type="submit" class="btn btn-primary" id="sendMailBtn" value="Send" onclick="sendMail()">
+                        <input type="submit" class="btn nav-btn-admin" id="sendMailBtn" value="Send" onclick="sendMail()">
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <br> <br>
+    <br>
+    <br>
     <% include ../partials/footer %>
 </body>
+
 </html>
