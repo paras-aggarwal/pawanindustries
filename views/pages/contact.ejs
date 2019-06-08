@@ -9,122 +9,7 @@
 
 <body>
 
-    <header>
-        <div class="row">
-            <div class="col-md-12">
-                <nav class="navbar navbar-expand-lg navbar-light sticky-top" id="nav">
-                    <a class="navbar-brand" href="/"><img class="img-responsive" id="logo-image" src="/assets/logo-pawan1.png" height="40" alt="Logo" title="Pawan Industries | Total Weighing Solutions" id="logo"> <span id="brand">Pawan Industries</span></a>
-                    <button type="button" aria-controls="sidebar" id="sidebarCollapse" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler">
-                        <i class="fas fa-bars"></i>
-                    </button>
-                    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="/">
-                                    <button class="btn btn-outline-success nav-btn"><i class="fas fa-home"></i> Home</button>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/about">
-                                    <button class="btn btn-outline-success nav-btn"><i class="fas fa-info-circle"></i> About Us</button>
-                                </a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <button class="btn btn-outline-success nav-btn">
-                                        <i class="fas fa-search"></i> Search
-                                    </button>
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <div id="search-bar" style="width:20rem">
-                                        <script>
-                                            (function() {
-                                                var cx = '016393719504244985253:ee_qjzshvoy';
-                                                var gcse = document.createElement('script');
-                                                gcse.type = 'text/javascript';
-                                                gcse.async = true;
-                                                gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-                                                var s = document.getElementsByTagName('script')[0];
-                                                s.parentNode.insertBefore(gcse, s);
-                                            })();
-                                        </script>
-                                        <gcse:search></gcse:search>
-                                    </div>
-
-                                </div>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/products">
-                                    <button class="btn btn-outline-success nav-btn"><i class="fas fa-kaaba"></i> Products</button>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/contact">
-                                    <button class="btn nav-btn-active"><i class="fas fa-envelope"></i> Contact Us</button>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-        </div>
-
-        <div class="wrapper">
-
-            <nav id="sidebar">
-                <div id="dismiss">
-                    <i class="fas fa-arrow-left"></i>
-                </div>
-
-                <ul class="list-unstyled components">
-                    <li>
-                        <a href="/" style="padding: 10px"><i class="fas fa-home"></i> Home</a>
-                    </li>
-                    <li>
-                        <a href="/about" style="padding: 10px"><i class="fas fa-info-circle"></i> About</a>
-                    </li>
-                    <li>
-                        <a href="#searchSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" style="padding: 10px"><i class="fas fa-search"></i> Search</a>
-                        <ul class="collapse list-unstyled" id="searchSubmenu">
-                            <li>
-                                <div id="search-bar" style="width:15rem">
-                                    <script>
-                                        (function() {
-                                            var cx = '016393719504244985253:ee_qjzshvoy';
-                                            var gcse = document.createElement('script');
-                                            gcse.type = 'text/javascript';
-                                            gcse.async = true;
-                                            gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-                                            var s = document.getElementsByTagName('script')[0];
-                                            s.parentNode.insertBefore(gcse, s);
-                                        })();
-                                    </script>
-                                    <gcse:search></gcse:search>
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="active">
-                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" style="padding: 10px"><i class="fas fa-kaaba"></i> Products</a>
-                        <ul class="collapse list-unstyled" id="pageSubmenu">
-                            <li>
-                                <a href="/products" style="padding: 10px">Industrial Segment</a>
-                            </li>
-                            <li>
-                                <a href="/products" style="padding: 10px">Retail Segment</a>
-                            </li>
-                            <li>
-                                <a href="/products" style="padding: 10px">Laboratory Segment</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="/contact" style="padding: 10px"><i class="fas fa-envelope"></i> Contact</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <% include ../partials/nav %>
 
     <!-- Main Section -->
     <div class="row no-gutters">
@@ -132,12 +17,84 @@
             <div class="text-center" id="heading">Contact Us</div>
         </div>
     </div>
-
     <br>
 
-    <div class="row no-gutters">
-        <div class="col-md-6">
+    <div class="row no-gutters contact-info-row">
+        <div class="col-md-6 mx-auto">
+            
             <div class="row no-gutters">
+                <span class="col-md contact-info-icons"><i class="fas fa-phone"></i></span>
+                <div class="col-md">Sudhir Kumar</div>
+                <div class="col-md"><a class="contact-link" href="tel:+919416026344">(India +91) 9416026344</a></div>
+            </div>
+            <div class="row no-gutters">
+                <div class="col-md"></div>
+                <div class="col-md">Akshit Aggarwal</div>
+                <div class="col-md"><a class="contact-link" href="tel:+919992079494">(India +91) 9992079494</a></div>
+            </div>
+            <hr /> 
+        </div>
+    </div>
+    
+    <br />
+
+    <div class="row no-gutters contact-info-row mx-auto">
+        <div class="col-md-6 mx-auto">
+            
+            <div class="row no-gutters">
+                <span class="col-md contact-info-icons"><i class="fas fa-map-marked-alt"></i></span>
+                <div class="col-md">
+                    <b>Address</b>
+                    <address>
+                        <u>PAWAN INDUSTRIES</u><br />
+                        Opp. Housing Board Colony, <br />
+                        Naraingarh Road, Ambala City - 134007 <br />
+                        Haryana, India
+                    </address>
+                </div>
+                <div class="col-md"></div>
+            </div>
+            <hr /> 
+        </div>
+    </div>
+
+    <br />
+
+    <div class="row no-gutters contact-info-row">
+        <div class="col-md-6 mx-auto">
+            <div class="row no-gutters">
+                <span class="col-md contact-info-icons"><i class="fas fa-envelope"></i></span>
+                <div class="col-md"><a class="contact-link" href="mailto:info@pawan-industries.in?subject=Regarding Query&body=Hi, ">info@pawan-industries.in</a></div>
+                <div class="col-md"></div>
+            </div>
+            <div class="row no-gutters">
+                <span class="col-md"></span>
+                <div class="col-md"><a class="contact-link" href="mailto:pawan.industries@hotmail.com?subject=Regarding Query&body=Hi, ">pawan.industries@hotmail.com</a></div>
+                <div class="col-md"></div>
+            </div> 
+        </div>
+    </div>    
+
+    <br /> <br />
+
+        <!-- Map -->
+        <!-- <div class="col-md-6"> -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3441.5738069870163!2d76.79154351529449!3d30.391457881757475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fc86fb04d0f19%3A0xe31dffe6c6cd0dcc!2sPawan+Industries!5e0!3m2!1sen!2sin!4v1537090549714" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCNruZm31QvHbhVQfw1yBvGFUoFMJO_6k&callback=myMap"></script> -->
+        <!-- </div> -->
+        <!-- Map Ends -->
+    </div>
+
+    <% include ../partials/footer %>
+
+</body>
+
+</html>
+
+
+<!--
+
+<div class="row no-gutters">
                 <table class="table" cellpadding="0" cellspacing="0">
                     <tbody>
                         <tr>
@@ -189,18 +146,5 @@
         </table>
       </div>
     </address>
-        </div>
 
-        <!-- Map -->
-        <div class="col-md-6">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3441.5738069870163!2d76.79154351529449!3d30.391457881757475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fc86fb04d0f19%3A0xe31dffe6c6cd0dcc!2sPawan+Industries!5e0!3m2!1sen!2sin!4v1537090549714" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-            <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCNruZm31QvHbhVQfw1yBvGFUoFMJO_6k&callback=myMap"></script> -->
-        </div>
-        <!-- Map Ends -->
-    </div>
-
-    <% include ../partials/footer %>
-
-</body>
-
-</html>
+-->
