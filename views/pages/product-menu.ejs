@@ -18,98 +18,124 @@
         </div>
     </div>
 
-    <ul class="product-list list-unstyled">
-        <div class="row">
-            
-            <ul class="col-md-4 list-unstyled mx-auto">
-                <li style="margin-left: 20px;"><strong>INDUSTRIAL SEGMENT</strong></li>
-                <% for(key in product){ %>
-                    <% if(product[key].segment == "INDUSTRIAL" && product[key].type == "MAIN" && product[key].visibility == "VISIBLE"){ %>
-                        <li id="item">
+    <div class="row no-gutters">
+        <% indCount = 0 %>
+        <% for(key in product){ %>
+            <% if(product[key].segment == "INDUSTRIAL" && product[key].type == "MAIN" && product[key].visibility == "VISIBLE"){ %>
+                <% indCount += 1 %>
+            <% } %>
+        <% } %>
+        <% if(indCount == 0) { %>
+        <% } else { %>
+            <div class="col-md-4 mx-auto">
+                <div class="product-type-header mx-auto">INDUSTRIAL SEGMENT</div>
+                <div class="row row-margin-bottom mx-auto">
+                    <% for(key in product){ %>
+                        <% if(product[key].segment == "INDUSTRIAL" && product[key].type == "MAIN" && product[key].visibility == "VISIBLE"){ %>
                             <% if(product[key].category == "MULTIPLE") { %>
                                 <a href="/products/sub/<%= product[key].alias %>" class="text-dark">
-                                    <% } else { %>
-                                        <a href="/products/<%= product[key].alias %>" class="text-dark">
-                                            <% } %>
-                                                <div class="card">
-                                                    <div class="row">
-                                                        <div class="col">
-                                                            <div class="card-block">
-                                                                <h5 class="card-title product-card-name"><%= product[key].productName %></h5>
-                                                            </div>
-                                                            <br>
-                                                        </div>
-                                                        <div class="col">
-                                                            <img src="<%= product[key].productImage %>" clas="img-fluid" width="85%" height="140">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                        </a>
-                        </li>
-                        <% } %>
+                            <% } else { %>
+                                <a href="/products/<%= product[key].alias %>" class="text-dark">
                             <% } %>
-            </ul>
-            <ul class="col-md-4 list-unstyled mx-auto">
+                            <div class="col-md no-padding lib-item" data-category="view">
+                                <div class="lib-panel">
+                                    <div class="row box-shadow">
+                                        <div class="col-md-6">
+                                            <img class="lib-img-show img-fluid" src="<%= product[key].productImage %>">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="lib-row lib-header">
+                                                <%= product[key].productName %>
+                                                <div class="lib-header-seperator"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <% } %>
+                    <% } %>
+                </div>
+            </div>
+        <% } %>
+        
+        <% retCount = 0 %>
+        <% for(key in product){ %>
+            <% if(product[key].segment == "INDUSTRIAL" && product[key].type == "MAIN" && product[key].visibility == "VISIBLE"){ %>
+                <% retCount += 1 %>
+            <% } %>
+        <% } %>
+        <% if(retCount == 0) { %>
+        <% } else { %>
+            <div class="col-md-4 mx-auto">
+                <div class="product-type-header mx-auto">RETAIL SEGMENT</div>
+                <div class="row row-margin-bottom mx-auto">
+                    <% for(key in product){ %>
+                        <% if(product[key].segment == "RETAIL" && product[key].type == "MAIN" && product[key].visibility == "VISIBLE"){ %>
+                            <% if(product[key].category == "MULTIPLE") { %>
+                                <a href="/products/sub/<%= product[key].alias %>" class="text-dark">
+                            <% } else { %>
+                                <a href="/products/<%= product[key].alias %>" class="text-dark">
+                            <% } %>
+                            <div class="col-md no-padding lib-item" data-category="view">
+                                <div class="lib-panel">
+                                    <div class="row box-shadow">
+                                        <div class="col-md-6">
+                                            <img class="lib-img-show img-fluid" src="<%= product[key].productImage %>">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="lib-row lib-header">
+                                                <%= product[key].productName %>
+                                                <div class="lib-header-seperator"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <% } %>
+                    <% } %>
+                </div>    
+            </div>
+        <% } %>
 
-                <li style="margin-left: 20px;"><strong>RETAIL SEGMENT</strong></li>
-
-                <% for(key in product){ %>
-                    <% if(product[key].segment == "RETAIL" && product[key].type == "MAIN" && product[key].visibility == "VISIBLE"){ %>
-                        <li id="item">
+        <% labCount = 0 %>
+        <% for(key in product){ %>
+            <% if(product[key].segment == "LABORATORY" && product[key].type == "MAIN" && product[key].visibility == "VISIBLE"){ %>
+                <% labCount++ %>
+            <% } %>
+        <% } %>
+        <% if(labCount == 0) { %>
+        <% } else { %>
+            <div class="col-md-4 mx-auto">
+                <div class="product-type-header mx-auto">LABORATORY SEGMENT</div>
+                <div class="row row-margin-bottom mx-auto">
+                    <% for(key in product){ %>
+                        <% if(product[key].segment == "LABORATORY" && product[key].type == "MAIN" && product[key].visibility == "VISIBLE"){ %>
                             <% if(product[key].category == "MULTIPLE") { %>
                                 <a href="/products/sub/<%= product[key].alias %>" class="text-dark">
-                                    <% } else { %>
-                                        <a href="/products/<%= product[key].alias %>" class="text-dark">
-                                            <% } %>
-                                                <div class="card">
-                                                    <div class="row">
-                                                        <div class="col">
-                                                            <div class="card-block">
-                                                                <h5 class="card-title product-card-name"><%= product[key].productName %></h5>
-                                                            </div>
-                                                            <br>
-                                                        </div>
-                                                        <div class="col">
-                                                            <img src="<%= product[key].productImage %>" clas="img-fluid" width="85%" height="140">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                        </a>
-                        </li>
-                        <% } %>
+                            <% } else { %>
+                                <a href="/products/<%= product[key].alias %>" class="text-dark">
                             <% } %>
-            </ul>
-            <ul class="col-md-4 list-unstyled mx-auto">
-                <li style="margin-left: 20px;"><strong>LABORATORY SEGMENT</strong></li>
-                <% for(key in product){ %>
-                    <% if(product[key].segment == "LABORATORY" && product[key].type == "MAIN" && product[key].visibility == "VISIBLE"){ %>
-                        <li id="item">
-                            <% if(product[key].category == "MULTIPLE") { %>
-                                <a href="/products/sub/<%= product[key].alias %>" class="text-dark">
-                                    <% } else { %>
-                                        <a href="/products/<%= product[key].alias %>" class="text-dark">
-                                            <% } %>
-                                                <div class="card">
-                                                    <div class="row">
-                                                        <div class="col">
-                                                            <div class="card-block">
-                                                                <h5 class="card-title product-card-name"><%= product[key].productName %></h5>
-                                                            </div>
-                                                            <br>
-                                                        </div>
-                                                        <div class="col">
-                                                            <img src="<%= product[key].productImage %>" clas="img-fluid" width="85%" height="140">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                        </a>
-                        </li>
+                            <div class="col-md no-padding lib-item" data-category="view">
+                                <div class="lib-panel">
+                                    <div class="row box-shadow">
+                                        <div class="col-md-6">
+                                            <img class="lib-img-show img-fluid" src="<%= product[key].productImage %>">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="lib-row lib-header">
+                                                <%= product[key].productName %>
+                                                <div class="lib-header-seperator"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         <% } %>
-                            <% } %>
-            </ul>
-        </div>
-        </li>
-    </ul>
+                    <% } %>
+                </div>
+            </div>
+        <% } %>
+    </div>
 
     <% include ../partials/footer %>
 </body>

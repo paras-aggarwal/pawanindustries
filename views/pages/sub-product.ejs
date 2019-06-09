@@ -5,6 +5,7 @@
         <% include ../partials/meta %>
             <title>
                 <%= product.productName %> | Pawan Industries | Total Weighing and Industrial Solutions</title>
+
 </head>
 
 <body>
@@ -21,39 +22,41 @@
         </div>
     </div>
 
-    <div class="container">
-        <div class="row no-gutters">
-            <% for(key in product) { %>
-                <div class="col-md-5 mx-auto">
-                    <section>
-                        <div class="container">
+        <div class="container">
+            <div class="row no-gutters">
+                <% contentCenter = 0 %>
+                <% for(key in product) { %>
+                    <div class="col-md-5 mx-auto">
+                        <section>
                             <% if(product[key].category == "MULTIPLE") { %>
                                 <a href="/products/sub/<%= product[key].alias %>" class="text-dark">
-                                    <% } else { %>
-                                        <a href="/products/<%= product[key].alias %>" class="text-dark">
-                                            <% } %>
-                                                <div class="card">
-                                                    <div class="row">
-                                                        <div class="col-md-6">
-                                                            <div class="card-block">
-                                                                <h5 class="card-title"><%= product[key].productName %></h5>
-                                                            </div>
-                                                            <br>
-                                                        </div>
-                                                        <div class="col">
-                                                            <img src="<%= product[key].productImage %>" clas="img-fluid" width="85%" height="140">
-                                                        </div>
-                                                    </div>
+                            <% } else { %>
+                                <a href="/products/<%= product[key].alias %>" class="text-dark">
+                            <% } %>
+                            <div class="row row-margin-bottom mx-auto">
+                                <div class="col-md no-padding lib-item" data-category="view">
+                                    <div class="lib-panel">
+                                        <div class="row box-shadow">
+                                            <div class="col-md-6">
+                                                <img class="lib-img-show img-fluid" src="<%= product[key].productImage %>">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="lib-row lib-header">
+                                                    <%= product[key].productName %>
+                                                    <div class="lib-header-seperator"></div>
                                                 </div>
-                                        </a>
-                        </div>
-                    </section>
-                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </secttion>
+                    </div>
                 <% } %>
+            </div>
         </div>
-
-    </div>
-
+        
     <% include ../partials/footer %>
 
 </body>
