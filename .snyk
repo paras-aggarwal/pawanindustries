@@ -20,3 +20,6 @@ patch:
         patched: '2019-07-05T08:13:41.124Z'
     - email-templates > preview-email > pug > pug-code-gen > pug-attrs > constantinople > babel-types > lodash:
         patched: '2019-07-05T08:13:41.124Z'
+  SNYK-JS-HTTPSPROXYAGENT-469131:
+    - web-push > https-proxy-agent:
+        patched: '2019-10-04T08:18:45.200Z'
