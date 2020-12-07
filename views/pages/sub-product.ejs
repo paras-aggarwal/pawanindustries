@@ -3,7 +3,7 @@
 <head>
     <% include ../partials/header %>
     <% include ../partials/meta %>
-    <title>Products | Pawan Industries | Total Weighing and Industrial Solutions</title>
+    <title>Products | Pawan Industries</title>
 </head>
 
 <body>
@@ -13,9 +13,9 @@
 
     <div class="row no-gutters">
         <div class="col-md-12 mx-auto">
-            <div class="text-center" id="heading">
+            <h1 class="text-center" id="heading">
                 <%= parent.productName %>
-            </div>
+            </h1>
         </div>
     </div>
 
@@ -50,7 +50,7 @@
                                             <div class="lib-panel">
                                                 <div class="row box-shadow">
                                                     <div class="col-md-6">
-                                                        <img class="lib-img-show img-fluid" src="<%= product[key].productImage %>">
+                                                        <img class="lib-img-show img-fluid" alt="<%= product[key].productName %> thumbnail" src="<%= product[key].productImage %>">
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="lib-row lib-header">

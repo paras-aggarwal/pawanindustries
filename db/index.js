@@ -9,10 +9,12 @@ mongoose.connect(process.env.MLAB_DB_URI);
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 db.once('open', function () {
-    console.log("Connected To MLab Cloud Database...");
+    console.log("Connected To Mongo Atlas Cloud Database...");
 });
 
 // Database schema
+
+// Product Details
 var ProductSchema = mongoose.Schema({
 	category: String,
 	type: String,
@@ -30,6 +32,8 @@ var ProductSchema = mongoose.Schema({
     visibility: String,
     createdAt: String
 });
+
+// Emails
 var MailSchema = mongoose.Schema({
     recipient: String,
     cc: String,
@@ -40,9 +44,24 @@ var MailSchema = mongoose.Schema({
     sentOn: String
 });
 
+// Sitemap URLs
+var SitemapSchema = mongoose.Schema({
+    loc: String,
+    lastmod: String,
+    priority: String
+})
+
 // Models
 var Product = mongoose.model('Product', ProductSchema);
 var Mail = mongoose.model('Mail', MailSchema);
+var Sitemap = mongoose.model('Sitemap', SitemapSchema);
+
+function getCurrentISOTime() {
+    var date = new Date();
+    var time = date.toISOString();
+    console.log("lastmod generated: " + time);
+    return time;
+}
 
 module.exports = function (app) {
 
@@ -150,7 +169,16 @@ module.exports = function (app) {
         });
     });
 
-    app.get('/products', function(req, res){
+    app.get('/sitemap.xml', function(req, res) {
+        
+        Sitemap.find({}, function(err, data) {
+            if(err) throw err;
+            res.setHeader('Content-Type', 'text/xml');
+            res.render('pages/sitemap', {sitemap: data});
+        });
+    });
+
+    app.get('/products', function(req, res) {
         Product.find({}, function (err, data) {
             if (err) 
                 console.error(err);
@@ -198,6 +226,7 @@ module.exports = function (app) {
 
 	app.post('/admin/products/add', require('connect-ensure-login').ensureLoggedIn(), function (req, res) {
 
+        var productCategory = req.body.category;
 		var newProduct = new Product({
 			category: req.body.category,
 			type: req.body.type,
@@ -218,7 +247,34 @@ module.exports = function (app) {
         newProduct.save(function (err, data) {
             if (err) 
             	return console.error(err);
-            res.render('pages/admin-add-products', {response: "New Product Added"});
+            if(data) {
+                var hostName = 'http://www.pawan-industries.in';
+                var location = hostName + '/products/';
+                if(productCategory == "MULTIPLE") {
+                    location = location + 'sub/' + req.body.alias;
+                } else {
+                    location = location + req.body.alias;    
+                }
+                var lastmodified = getCurrentISOTime().toString();
+                var ranking = '0.8';
+                var newSitemap = new Sitemap({
+                    loc: location,
+                    lastmod: lastmodified,
+                    priority: ranking
+                });
+                console.log(newSitemap);
+                Sitemap.findOne({'loc': location}, function(find_err, success) {
+                    if(find_err) console.err(err);
+                    else if(!success) {
+                        newSitemap.save(function(save_err, entry) {
+                            if(save_err) throw err;
+                            else
+                                console.log("new entry created in sitemap");
+                        });
+                    }
+                });
+                res.render('pages/admin-add-products', {response: "New Product Added"});
+            }
         });
 	});
 
@@ -249,7 +305,7 @@ module.exports = function (app) {
             else {
                 res.redirect('/admin/products');
             }
-        })
+        });
     });
 
     app.get('/admin/products/edit/:alias', require('connect-ensure-login').ensureLoggedIn(), function(req, res) {

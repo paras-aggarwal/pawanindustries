@@ -14,7 +14,7 @@
     <!-- Main Section -->
     <div class="row no-gutters product-list-a">
         <div class="col-md-12 mx-auto">
-            <div class="text-center" id="heading">Products</div>
+            <h1 class="text-center" id="heading">Products</h1>
         </div>
     </div>
 
@@ -28,7 +28,7 @@
         <% if(indCount == 0) { %>
         <% } else { %>
             <div class="col-md-4 mx-auto">
-                <div class="product-type-header mx-auto">INDUSTRIAL SEGMENT</div>
+                <h2 class="product-type-header mx-auto">INDUSTRIAL SEGMENT</h2>
                 <div class="row row-margin-bottom mx-auto">
                     <% for(key in product){ %>
                         <% if(product[key].segment == "INDUSTRIAL" && product[key].type == "MAIN" && product[key].visibility == "VISIBLE"){ %>
@@ -41,7 +41,7 @@
                                 <div class="lib-panel">
                                     <div class="row box-shadow">
                                         <div class="col-md-6">
-                                            <img class="lib-img-show img-fluid" src="<%= product[key].productImage %>">
+                                            <img class="lib-img-show img-fluid" alt="<%= product[key].productName %> thumbnail" src="<%= product[key].productImage %>">
                                         </div>
                                         <div class="col-md-6">
                                             <div class="lib-row lib-header">
@@ -67,7 +67,7 @@
         <% if(retCount == 0) { %>
         <% } else { %>
             <div class="col-md-4 mx-auto">
-                <div class="product-type-header mx-auto">RETAIL SEGMENT</div>
+                <h2 class="product-type-header mx-auto">RETAIL SEGMENT</h2>
                 <div class="row row-margin-bottom mx-auto">
                     <% for(key in product){ %>
                         <% if(product[key].segment == "RETAIL" && product[key].type == "MAIN" && product[key].visibility == "VISIBLE"){ %>
@@ -80,7 +80,7 @@
                                 <div class="lib-panel">
                                     <div class="row box-shadow">
                                         <div class="col-md-6">
-                                            <img class="lib-img-show img-fluid" src="<%= product[key].productImage %>">
+                                            <img class="lib-img-show img-fluid" alt="<%= product[key].productName %> thumbnail" src="<%= product[key].productImage %>">
                                         </div>
                                         <div class="col-md-6">
                                             <div class="lib-row lib-header">
@@ -106,7 +106,7 @@
         <% if(labCount == 0) { %>
         <% } else { %>
             <div class="col-md-4 mx-auto">
-                <div class="product-type-header mx-auto">LABORATORY SEGMENT</div>
+                <h2 class="product-type-header mx-auto">LABORATORY SEGMENT</h2>
                 <div class="row row-margin-bottom mx-auto">
                     <% for(key in product){ %>
                         <% if(product[key].segment == "LABORATORY" && product[key].type == "MAIN" && product[key].visibility == "VISIBLE"){ %>
@@ -119,7 +119,7 @@
                                 <div class="lib-panel">
                                     <div class="row box-shadow">
                                         <div class="col-md-6">
-                                            <img class="lib-img-show img-fluid" src="<%= product[key].productImage %>">
+                                            <img class="lib-img-show img-fluid" alt="<%= product[key].productName %> thumbnail" src="<%= product[key].productImage %>">
                                         </div>
                                         <div class="col-md-6">
                                             <div class="lib-row lib-header">

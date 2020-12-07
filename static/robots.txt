@@ -1,5 +1,4 @@
 User-Agent: *
-Disallow: 
-Allow: /sitemap.xml
+Disallow:
 
 Sitemap: http://www.pawan-industries.in/sitemap.xml
